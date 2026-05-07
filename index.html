@@ -3,30 +3,49 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>DevHub – Risorse Web & Programmi</title>
-  <link rel="stylesheet" href="stile.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css">
+  <title>DevHub – Risorse per il Web</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- ══════════════ NAVBAR ══════════════ -->
+<!-- ====================================================
+     NAVBAR
+     position sticky la fa rimanere in cima anche scrollando
+     ==================================================== -->
 <nav>
-  <a href="#home" class="brand">&lt;<span>Dev</span>Hub /&gt;</a>
+  <a href="index.html" class="brand">&lt;<span>Dev</span>Hub /&gt;</a>
+
+  <!-- menu hamburger visibile solo su mobile (CSS lo nasconde su desktop) -->
+  <div class="hamburger" id="hamburger" aria-label="Apri menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
   <div class="nav-links">
-    <a href="#home" class="attiva">Home</a>
-    <a href="#apprendimento">Imparare</a>
-    <a href="#design">Design</a>
-    <a href="#sviluppo">Sviluppo</a>
-    <a href="#programmi">Programmi</a>
-    <a href="#produttivita">Produttività</a>
+    <a href="index.html" class="attiva">Home</a>
+    <a href="imparare.html">Imparare</a>
+    <a href="design.html">Design</a>
+    <a href="sviluppo.html">Sviluppo</a>
+    <a href="programmi.html">Programmi</a>
+    <a href="contatti.html">Chi siamo</a>
   </div>
 </nav>
 
-<!-- ══════════════ HERO ══════════════ -->
+
+<!-- ====================================================
+     HERO - la sezione grande della homepage
+     ==================================================== -->
 <div class="hero" id="home">
-  <div class="eyebrow">Directory di risorse · Aggiornato 2026</div>
+  <div class="eyebrow">Progetto scolastico · 3^B Informatica · 2025/2026</div>
   <h1>Tutto quello che ti serve<br>per lavorare sul <em>web.</em></h1>
-  <p>Una raccolta curata di siti, piattaforme e programmi professionali. Niente tutorial inventati — solo link veri ai migliori strumenti.</p>
+  <p>
+    Una raccolta di siti, piattaforme e programmi utili per imparare
+    e lavorare nel mondo dello sviluppo web. Niente tutorial inventati,
+    solo link reali ai migliori strumenti che conosciamo.
+  </p>
+
+  <!-- statistiche animate via JavaScript (vedi script.js sezione contatore) -->
   <div class="stats">
     <div class="stat"><b>40+</b><small>risorse selezionate</small></div>
     <div class="stat"><b>5</b><small>categorie</small></div>
@@ -34,352 +53,146 @@
   </div>
 </div>
 
-<!-- ══════════════ MAIN ══════════════ -->
+
+<!-- ====================================================
+     CONTENUTO PRINCIPALE
+     ==================================================== -->
 <div class="main">
 
-  <!-- ─────────── 1. IMPARARE ─────────── -->
-  <div class="sezione" id="apprendimento">
+  <!-- ─────────── ANTEPRIMA SEZIONI ─────────── -->
+  <div class="sezione">
     <div class="sezione-head">
-      <h2>Imparare</h2>
-      <span class="count">9 risorse</span>
+      <h2>🗂️ Esplora per categoria</h2>
     </div>
-    <p class="sezione-desc">Piattaforme e siti per imparare programmazione, design e tecnologia. Dai corsi video alla documentazione ufficiale.</p>
+    <p class="sezione-desc">Abbiamo diviso le risorse in 5 categorie. Clicca su quella che ti interessa.</p>
+
+    <!-- griglia delle 5 pagine del sito -->
+    <div class="griglia">
+
+      <a class="card card-dark" href="imparare.html">
+        <div class="card-top">
+          <div class="card-icon">📚</div>
+          <span class="badge free">9 risorse</span>
+        </div>
+        <h3>Imparare</h3>
+        <p>Piattaforme e siti per imparare a programmare. Da freeCodeCamp a CS50 di Harvard, tutti gratuiti o quasi.</p>
+        <span class="card-link">Vai alla sezione</span>
+      </a>
+
+      <a class="card" href="design.html">
+        <div class="card-top">
+          <div class="card-icon">🎨</div>
+          <span class="badge free">8 risorse</span>
+        </div>
+        <h3>Design</h3>
+        <p>Strumenti per creare interfacce grafiche, scegliere font, trovare colori e prendere ispirazione dai migliori designer.</p>
+        <span class="card-link">Vai alla sezione</span>
+      </a>
+
+      <a class="card" href="sviluppo.html">
+        <div class="card-top">
+          <div class="card-icon">⚙️</div>
+          <span class="badge free">8 risorse</span>
+        </div>
+        <h3>Sviluppo</h3>
+        <p>Risorse tecniche per chi già programma. GitHub, hosting, strumenti per CSS e compatibilità browser.</p>
+        <span class="card-link">Vai alla sezione</span>
+      </a>
+
+      <a class="card" href="programmi.html">
+        <div class="card-top">
+          <div class="card-icon">💻</div>
+          <span class="badge free">8 programmi</span>
+        </div>
+        <h3>Programmi</h3>
+        <p>Software da installare sul computer: editor di codice, browser per sviluppatori, strumenti per il versionamento.</p>
+        <span class="card-link">Vai alla sezione</span>
+      </a>
+
+      <a class="card" href="contatti.html">
+        <div class="card-top">
+          <div class="card-icon">👥</div>
+          <span class="badge open">Info</span>
+        </div>
+        <h3>Chi siamo</h3>
+        <p>Informazioni su chi ha fatto questo sito, come è stato costruito e le domande frequenti sul progetto.</p>
+        <span class="card-link">Vai alla sezione</span>
+      </a>
+
+    </div>
+  </div><!-- /sezione categorie -->
+
+
+  <!-- ─────────── RISORSE IN EVIDENZA ─────────── -->
+  <div class="sezione">
+    <div class="sezione-head">
+      <h2>⭐ Le nostre preferite</h2>
+      <span class="count">selezionate da noi</span>
+    </div>
+    <p class="sezione-desc">Le risorse che usiamo di più e che consigliamo per prima cosa a chi vuole iniziare.</p>
 
     <div class="griglia">
-      <a class="card card-dark" href="https://developer.mozilla.org" target="_blank" rel="noopener">
+
+      <a class="card" href="https://developer.mozilla.org" target="_blank" rel="noopener">
         <div class="card-top"><div class="card-icon">🦊</div><span class="badge free">Gratis</span></div>
         <h3>MDN Web Docs</h3>
-        <p>La documentazione ufficiale di HTML, CSS e JavaScript. Il riferimento numero uno per ogni sviluppatore web, curato da Mozilla.</p>
+        <p>La documentazione ufficiale di HTML, CSS e JavaScript fatta da Mozilla. Il primo posto dove cercare quando non si sa qualcosa.</p>
         <span class="card-link">developer.mozilla.org</span>
       </a>
 
-      <a class="card" href="https://www.freecodecamp.org" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🔥</div><span class="badge free">Gratis</span></div>
-        <h3>freeCodeCamp</h3>
-        <p>Corsi completi su sviluppo web, Python, data science e molto altro. Certificazioni gratuite con progetti pratici reali.</p>
-        <span class="card-link">freecodecamp.org</span>
-      </a>
-
-      <a class="card" href="https://www.theodinproject.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">⚔️</div><span class="badge free">Gratis</span></div>
-        <h3>The Odin Project</h3>
-        <p>Curriculum open source per diventare sviluppatore full-stack. Percorso strutturato con HTML, CSS, JavaScript e Ruby/NodeJS.</p>
-        <span class="card-link">theodinproject.com</span>
-      </a>
-
-      <a class="card" href="https://cs50.harvard.edu" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🎓</div><span class="badge free">Gratis</span></div>
-        <h3>CS50 – Harvard</h3>
-        <p>Il corso di informatica più famoso al mondo, offerto gratuitamente da Harvard. Copre programmazione, algoritmi e molto altro.</p>
-        <span class="card-link">cs50.harvard.edu</span>
-      </a>
-
-      <a class="card" href="https://www.coursera.org" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🎯</div><span class="badge paid">A pagamento</span></div>
-        <h3>Coursera</h3>
-        <p>Corsi universitari online da MIT, Stanford, Google e altri. Certificazioni riconosciute a livello professionale e accademico.</p>
-        <span class="card-link">coursera.org</span>
-      </a>
-
-      <a class="card" href="https://www.udemy.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🧑‍💻</div><span class="badge paid">A pagamento</span></div>
-        <h3>Udemy</h3>
-        <p>Migliaia di corsi su sviluppo web, cybersecurity, design e altro. Prezzi accessibili, spesso in offerta. Acquisto una tantum.</p>
-        <span class="card-link">udemy.com</span>
-      </a>
-
-      <a class="card" href="https://www.w3schools.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🌐</div><span class="badge free">Gratis</span></div>
-        <h3>W3Schools</h3>
-        <p>Riferimento rapido per HTML, CSS, JavaScript, SQL, Python e altro. Ideale per controllare sintassi e fare prove interattive.</p>
-        <span class="card-link">w3schools.com</span>
-      </a>
-
-      <a class="card" href="https://roadmap.sh" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🗺️</div><span class="badge free">Gratis</span></div>
-        <h3>Roadmap.sh</h3>
-        <p>Mappe visive dei percorsi di apprendimento per diventare frontend, backend, DevOps o specialista in sicurezza informatica.</p>
-        <span class="card-link">roadmap.sh</span>
-      </a>
-
-      <a class="card" href="https://javascript.info" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">📖</div><span class="badge free">Gratis</span></div>
-        <h3>JavaScript.info</h3>
-        <p>La guida più completa e moderna a JavaScript. Dai fondamentali agli argomenti avanzati come async/await, Promise e OOP.</p>
-        <span class="card-link">javascript.info</span>
-      </a>
-    </div>
-  </div>
-
-  <!-- ─────────── 2. DESIGN ─────────── -->
-  <div class="sezione" id="design">
-    <div class="sezione-head">
-      <h2>🎨 Design</h2>
-      <span class="count">8 risorse</span>
-    </div>
-    <p class="sezione-desc">Strumenti per creare interfacce, trovare ispirazione, scegliere font e colori. Dal prototipo al prodotto finito.</p>
-
-    <div class="griglia">
-      <a class="card card-dark" href="https://www.figma.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🖼️</div><span class="badge free">Freemium</span></div>
-        <h3>Figma</h3>
-        <p>Lo strumento di design collaborativo più usato al mondo. Prototipazione, wireframe e UI design tutto nel browser. Gratis per uso base.</p>
-        <span class="card-link">figma.com</span>
-      </a>
-
-      <a class="card" href="https://dribbble.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🏀</div><span class="badge free">Gratis</span></div>
-        <h3>Dribbble</h3>
-        <p>La piattaforma di riferimento per l'ispirazione UI/UX. Milioni di progetti di designer professionisti da tutto il mondo.</p>
-        <span class="card-link">dribbble.com</span>
-      </a>
-
-      <a class="card" href="https://coolors.co" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🎨</div><span class="badge free">Gratis</span></div>
-        <h3>Coolors</h3>
-        <p>Generatore di palette colori professionali. Esporta in HEX, RGB, CSS. Ottimo per trovare combinazioni armoniose in pochi secondi.</p>
-        <span class="card-link">coolors.co</span>
-      </a>
-
-      <a class="card" href="https://fonts.google.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🔤</div><span class="badge free">Gratis</span></div>
-        <h3>Google Fonts</h3>
-        <p>Libreria di oltre 1400 font open source pronti da usare nei siti web. Basta aggiungere un link CSS e il font è disponibile.</p>
-        <span class="card-link">fonts.google.com</span>
-      </a>
-
-      <a class="card" href="https://unsplash.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">📷</div><span class="badge free">Gratis</span></div>
-        <h3>Unsplash</h3>
-        <p>Foto professionali ad alta risoluzione completamente gratuite e libere da copyright. Perfette per siti, presentazioni e progetti.</p>
-        <span class="card-link">unsplash.com</span>
-      </a>
-
-      <a class="card" href="https://fontawesome.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">⭐</div><span class="badge free">Freemium</span></div>
-        <h3>Font Awesome</h3>
-        <p>La libreria di icone più usata sul web. Migliaia di icone vettoriali pronte da usare in HTML con un semplice tag.</p>
-        <span class="card-link">fontawesome.com</span>
-      </a>
-
-      <a class="card" href="https://www.svgrepo.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🔷</div><span class="badge free">Gratis</span></div>
-        <h3>SVG Repo</h3>
-        <p>Oltre 500.000 icone e loghi SVG gratuiti e open source. Scaricabili direttamente e modificabili come codice.</p>
-        <span class="card-link">svgrepo.com</span>
-      </a>
-
-      <a class="card" href="https://www.canva.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">✏️</div><span class="badge free">Freemium</span></div>
-        <h3>Canva</h3>
-        <p>Strumento di grafica online semplicissimo. Ottimo per creare presentazioni, social post, loghi e materiali visivi senza esperienza.</p>
-        <span class="card-link">canva.com</span>
-      </a>
-    </div>
-  </div>
-
-  <!-- ─────────── 3. SVILUPPO ─────────── -->
-  <div class="sezione" id="sviluppo">
-    <div class="sezione-head">
-      <h2>⚙️ Sviluppo</h2>
-      <span class="count">8 risorse</span>
-    </div>
-    <p class="sezione-desc">Strumenti online per scrivere codice, testarlo, ospitare siti e collaborare su progetti.</p>
-
-    <div class="griglia">
-      <a class="card card-dark" href="https://github.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🐙</div><span class="badge free">Gratis</span></div>
-        <h3>GitHub</h3>
-        <p>La piattaforma più usata per salvare, condividere e collaborare su codice. Essenziale per qualsiasi sviluppatore. Hosting gratuito incluso.</p>
-        <span class="card-link">github.com</span>
-      </a>
-
-      <a class="card" href="https://codepen.io" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🖊️</div><span class="badge free">Freemium</span></div>
-        <h3>CodePen</h3>
-        <p>Editor HTML/CSS/JS nel browser con anteprima in tempo reale. Perfetto per fare prove veloci e condividere snippet di codice.</p>
-        <span class="card-link">codepen.io</span>
-      </a>
-
-      <a class="card" href="https://stackblitz.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">⚡</div><span class="badge free">Freemium</span></div>
-        <h3>StackBlitz</h3>
-        <p>IDE completo nel browser. Supporta React, Angular, Vue, Node.js e altri framework. Nessuna installazione richiesta.</p>
-        <span class="card-link">stackblitz.com</span>
-      </a>
-
-      <a class="card" href="https://getbootstrap.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🅱️</div><span class="badge open">Open Source</span></div>
-        <h3>Bootstrap</h3>
-        <p>Il framework CSS più usato al mondo. Componenti pronti, griglia responsive e utility CSS per costruire siti velocemente.</p>
-        <span class="card-link">getbootstrap.com</span>
-      </a>
-
-      <a class="card" href="https://tailwindcss.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🌊</div><span class="badge open">Open Source</span></div>
-        <h3>Tailwind CSS</h3>
-        <p>Framework CSS utility-first. Invece di componenti pre-costruiti, offre classi atomiche per costruire design personalizzati.</p>
-        <span class="card-link">tailwindcss.com</span>
-      </a>
-
-      <a class="card" href="https://vercel.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">▲</div><span class="badge free">Freemium</span></div>
-        <h3>Vercel</h3>
-        <p>Piattaforma per pubblicare siti web e app in pochi secondi, collegata direttamente a GitHub. Hosting gratuito per progetti personali.</p>
-        <span class="card-link">vercel.com</span>
-      </a>
-
-      <a class="card" href="https://www.netlify.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🌿</div><span class="badge free">Freemium</span></div>
-        <h3>Netlify</h3>
-        <p>Hosting gratuito per siti statici con deploy automatico da GitHub. Perfetto per pubblicare progetti HTML/CSS/JS senza server.</p>
-        <span class="card-link">netlify.com</span>
-      </a>
-
-      <a class="card" href="https://caniuse.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🔍</div><span class="badge free">Gratis</span></div>
-        <h3>Can I Use</h3>
-        <p>Controlla la compatibilità di ogni proprietà CSS o funzionalità HTML con tutti i browser. Indispensabile per il cross-browser testing.</p>
-        <span class="card-link">caniuse.com</span>
-      </a>
-    </div>
-  </div>
-
-  <!-- ─────────── 4. PROGRAMMI ─────────── -->
-  <div class="sezione" id="programmi">
-    <div class="sezione-head">
-      <h2>💻 Programmi da installare</h2>
-      <span class="count">8 programmi</span>
-    </div>
-    <p class="sezione-desc">Software da scaricare sul tuo computer per lavorare in modo professionale. Editor, terminali, browser per sviluppatori.</p>
-
-    <div class="griglia">
-      <a class="card card-dark" href="https://code.visualstudio.com" target="_blank" rel="noopener">
+      <a class="card" href="https://code.visualstudio.com" target="_blank" rel="noopener">
         <div class="card-top"><div class="card-icon">🔵</div><span class="badge free">Gratis</span></div>
         <h3>Visual Studio Code</h3>
-        <p>L'editor di codice più usato al mondo. Leggero, veloce, con migliaia di estensioni. Supporta qualsiasi linguaggio. Windows / Mac / Linux.</p>
+        <p>L'editor che usiamo entrambi per scrivere codice. Gratuito, veloce, con tantissime estensioni. Funziona su Windows, Mac e Linux.</p>
         <span class="card-link">code.visualstudio.com</span>
       </a>
 
-      <a class="card" href="https://www.figma.com/downloads" target="_blank" rel="noopener">
+      <a class="card" href="https://github.com" target="_blank" rel="noopener">
+        <div class="card-top"><div class="card-icon">🐙</div><span class="badge free">Freemium</span></div>
+        <h3>GitHub</h3>
+        <p>Dove si salva e condivide il codice. È qui che abbiamo caricato anche questo progetto. Indispensabile per lavorare in gruppo.</p>
+        <span class="card-link">github.com</span>
+      </a>
+
+      <a class="card card-dark" href="https://www.figma.com" target="_blank" rel="noopener">
         <div class="card-top"><div class="card-icon">🖼️</div><span class="badge free">Freemium</span></div>
-        <h3>Figma Desktop</h3>
-        <p>Versione desktop di Figma per lavorare al design di interfacce anche offline. Stesso potere del web, più veloce e reattivo.</p>
-        <span class="card-link">figma.com/downloads</span>
+        <h3>Figma</h3>
+        <p>Strumento di design collaborativo, funziona nel browser. Prima di scrivere codice abbiamo progettato il sito qui. Gratis per uso base.</p>
+        <span class="card-link">figma.com</span>
       </a>
 
-      <a class="card" href="https://git-scm.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🌿</div><span class="badge open">Open Source</span></div>
-        <h3>Git</h3>
-        <p>Il sistema di controllo versione usato da tutti gli sviluppatori. Indispensabile per gestire le modifiche al codice e collaborare su GitHub.</p>
-        <span class="card-link">git-scm.com</span>
-      </a>
-
-      <a class="card" href="https://www.google.com/intl/it/chrome" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🌐</div><span class="badge free">Gratis</span></div>
-        <h3>Google Chrome</h3>
-        <p>Il browser preferito dagli sviluppatori grazie ai DevTools integrati. Permette di ispezionare HTML/CSS, debuggare JS e testare il responsive.</p>
-        <span class="card-link">google.com/chrome</span>
-      </a>
-
-      <a class="card" href="https://www.postman.com/downloads" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">📮</div><span class="badge free">Freemium</span></div>
-        <h3>Postman</h3>
-        <p>Strumento professionale per testare API REST. Invia richieste HTTP, visualizza le risposte e organizza le tue API in collection.</p>
-        <span class="card-link">postman.com</span>
-      </a>
-
-      <a class="card" href="https://www.docker.com/products/docker-desktop" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🐳</div><span class="badge free">Freemium</span></div>
-        <h3>Docker Desktop</h3>
-        <p>Crea ambienti di sviluppo isolati (container) che funzionano uguali su qualsiasi computer. Standard nel mondo professionale.</p>
-        <span class="card-link">docker.com</span>
-      </a>
-
-      <a class="card" href="https://tableplus.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🗄️</div><span class="badge free">Freemium</span></div>
-        <h3>TablePlus</h3>
-        <p>Client database con interfaccia moderna e pulita. Supporta MySQL, PostgreSQL, SQLite e altri. Ottimo per gestire database visivamente.</p>
-        <span class="card-link">tableplus.com</span>
-      </a>
-
-      <a class="card" href="https://www.adobe.com/it/products/photoshop.html" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🖌️</div><span class="badge paid">A pagamento</span></div>
-        <h3>Adobe Photoshop</h3>
-        <p>Il software professionale per il ritocco fotografico e la grafica raster. Standard dell'industria per design visivo e post-produzione.</p>
-        <span class="card-link">adobe.com/photoshop</span>
-      </a>
     </div>
-  </div>
+  </div><!-- /risorse in evidenza -->
 
-  <!-- ─────────── 5. PRODUTTIVITA ─────────── -->
-  <div class="sezione" id="produttivita">
+
+  <!-- ─────────── COME ABBIAMO FATTO QUESTO SITO ─────────── -->
+  <div class="sezione">
     <div class="sezione-head">
-      <h2>🚀 Produttività & AI</h2>
-      <span class="count">7 risorse</span>
+      <h2>🛠️ Come è fatto questo sito</h2>
     </div>
-    <p class="sezione-desc">Strumenti per lavorare meglio, più in fretta. Intelligenza artificiale, organizzazione e collaborazione.</p>
-
-    <div class="griglia">
-      <a class="card card-dark" href="https://chat.openai.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🤖</div><span class="badge free">Freemium</span></div>
-        <h3>ChatGPT</h3>
-        <p>L'assistente AI di OpenAI. Ottimo per spiegazioni, generare codice, fare debug, tradurre e rispondere a domande tecniche.</p>
-        <span class="card-link">chat.openai.com</span>
-      </a>
-
-      <a class="card" href="https://www.notion.so" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">📝</div><span class="badge free">Freemium</span></div>
-        <h3>Notion</h3>
-        <p>Workspace all-in-one per note, documentazione, database e gestione progetti. Ottimo per organizzare il lavoro e tenere appunti di studio.</p>
-        <span class="card-link">notion.so</span>
-      </a>
-
-      <a class="card" href="https://trello.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">📋</div><span class="badge free">Freemium</span></div>
-        <h3>Trello</h3>
-        <p>Gestione progetti con bacheche Kanban. Semplice e visivo, perfetto per organizzare task, progetti scolastici e lavori di gruppo.</p>
-        <span class="card-link">trello.com</span>
-      </a>
-
-      <a class="card" href="https://stackoverflow.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">💬</div><span class="badge free">Gratis</span></div>
-        <h3>Stack Overflow</h3>
-        <p>La community più grande al mondo per domande tecniche di programmazione. Quasi ogni errore o problema ha già una risposta qui.</p>
-        <span class="card-link">stackoverflow.com</span>
-      </a>
-
-      <a class="card" href="https://www.loom.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🎥</div><span class="badge free">Freemium</span></div>
-        <h3>Loom</h3>
-        <p>Registra video del tuo schermo e condividili in un link. Perfetto per spiegare un bug, fare una demo o documentare il proprio lavoro.</p>
-        <span class="card-link">loom.com</span>
-      </a>
-
-      <a class="card" href="https://excalidraw.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">✏️</div><span class="badge open">Open Source</span></div>
-        <h3>Excalidraw</h3>
-        <p>Lavagna virtuale per disegnare schemi, diagrammi e wireframe. Stile a mano libera, collaborativo e open source. Nessun account richiesto.</p>
-        <span class="card-link">excalidraw.com</span>
-      </a>
-
-      <a class="card" href="https://regex101.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🔎</div><span class="badge free">Gratis</span></div>
-        <h3>Regex101</h3>
-        <p>Testa e debugga espressioni regolari in tempo reale. Spiega ogni parte della regex con un linguaggio comprensibile. Supporta più linguaggi.</p>
-        <span class="card-link">regex101.com</span>
-      </a>
-    </div>
+    <p class="sezione-desc">
+      Il sito è scritto in HTML, CSS e un po' di JavaScript. Niente framework, niente librerie esterne tranne i font di Google.
+      Per alcune parti di JavaScript (il filtro di ricerca, l'animazione dei numeri e l'accordion delle FAQ) abbiamo usato
+      l'intelligenza artificiale per capire come fare, e abbiamo commentato quelle parti nel codice.
+      Il design lo abbiamo fatto noi ispirandoci a siti come Linear e Vercel.
+    </p>
   </div>
 
 </div><!-- /main -->
 
-<!-- ══════════════ FOOTER ══════════════ -->
+
+<!-- ====================================================
+     FOOTER
+     ==================================================== -->
 <footer>
-  <span>&lt;<span>Dev</span>Hub /&gt;</span>
-  <span>Progetto scolastico · 2025 · Tutti i link rimandano a siti esterni.</span>
+  <span class="brand-footer">&lt;DevHub /&gt;</span>
+  <span>Progetto scolastico · Matteo R. e Lorenzo B. · 3^B · 2025/2026</span>
+  <span>Tutti i link rimandano a siti esterni.</span>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+<!-- bottone torna su, gestito da script.js -->
+<button id="torna-su" title="Torna in cima">↑</button>
+
+<script src="script.js"></script>
 </body>
 </html>

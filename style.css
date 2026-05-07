@@ -1,46 +1,75 @@
+/* =============================================
+   DevHub - Progetto Scolastico
+   Autori: Matteo R. e Lorenzo B.
+   Classe: 3^B Informatica
+   Anno: 2025/2026
+   ============================================= */
+
+/* importiamo i font da google fonts, sono gratis e si mettono prima di tutto */
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Cabinet+Grotesk:wght@300;400;500;700;800&display=swap');
+
+/* le variabili CSS -- questa cosa delle variabili l'abbiamo imparata di recente
+   si dichiarano nel :root e poi si usano con var(--nome)
+   è comoda perché se cambi un colore lo cambi solo qui e si aggiorna dappertutto */
 :root {
-  --bg:     #f5f2eb;
-  --bg2:    #edeae1;
-  --ink:    #1a1814;
-  --ink2:   #6b6760;
-  --accent: #c84b2f;
-  --ora:    #e8602a;
-  --border: #d6d1c7;
-  --card:   #ffffff;
-  --mono:   'DM Mono', monospace;
-  --sans:   'Cabinet Grotesk', sans-serif;
+  --bg:     #f5f2eb;   /* sfondo principale (beige chiaro) */
+  --bg2:    #edeae1;   /* sfondo secondario un po' più scuro */
+  --ink:    #1a1814;   /* colore testo principale (quasi nero) */
+  --ink2:   #6b6760;   /* testo secondario (grigio) */
+  --accent: #c84b2f;   /* rosso per gli accenti */
+  --ora:    #e8602a;   /* arancione per highlights */
+  --border: #d6d1c7;   /* colore bordi */
+  --card:   #ffffff;   /* sfondo delle card */
+  --mono:   'DM Mono', monospace;   /* font per codice/label */
+  --sans:   'Cabinet Grotesk', sans-serif;  /* font principale */
 }
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* reset base: togliamo margin e padding a tutti gli elementi
+   box-sizing: border-box fa sì che il padding non aumenti la larghezza dell'elemento
+   questa cosa ci ha fatto impazzire all'inizio perché le div si sovrapponevano */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
 body {
   font-family: var(--sans);
   background: var(--bg);
   color: var(--ink);
   font-size: 16px;
-  line-height: 1.6;
+  line-height: 1.6;  /* interlinea, 1.6 è considerata ottimale per la leggibilità */
 }
 
-/* NAV */
+/* ============================================
+   NAVBAR
+   ============================================ */
+
 nav {
   background: var(--ink);
-  padding: 0 5%;
+  padding: 0 5%;        /* 5% ai lati così si adatta a qualsiasi schermo */
   height: 58px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: sticky;
+  display: flex;          /* flex è la salvezza per allineare le cose */
+  align-items: center;    /* centra verticalmente */
+  justify-content: space-between;  /* mette logo a sinistra e link a destra */
+  position: sticky;  /* rimane in cima mentre si scrolla, lo ha suggerito Matteo */
   top: 0;
-  z-index: 99;
+  z-index: 99;  /* z-index alto così sta sopra a tutto il resto della pagina */
 }
+
 .brand {
   font-family: var(--mono);
   color: var(--bg);
-  text-decoration: none;
+  text-decoration: none;  /* toglie la sottolineatura del link */
   font-size: .95rem;
 }
-.brand span { color: var(--ora); }
-.nav-links { display: flex; gap: 4px; }
+.brand span { color: var(--ora); }  /* la parte arancione del logo */
+
+.nav-links {
+  display: flex;
+  gap: 4px;  /* spazio tra i link */
+}
+
 .nav-links a {
   color: #999;
   text-decoration: none;
@@ -48,27 +77,62 @@ nav {
   font-weight: 600;
   padding: 6px 12px;
   border-radius: 5px;
+  /* transition: fa l'animazione quando cambia colore, il numero sono i secondi */
   transition: color .15s, background .15s;
 }
-.nav-links a:hover { color: #fff; background: #2a2820; }
-.nav-links a.attiva { color: #fff; background: var(--accent); }
+.nav-links a:hover {
+  color: #fff;
+  background: #2a2820;
+}
+/* classe per il link della pagina attiva (aggiunta via JavaScript) */
+.nav-links a.attiva {
+  color: #fff;
+  background: var(--accent);
+}
 
-/* HERO */
+/* hamburger menu per mobile - aggiunto dopo, ci ha aiutato l'IA perché
+   non sapevamo come farlo sparire/comparire con solo CSS */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: 4px;
+}
+.hamburger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #fff;
+  border-radius: 2px;
+  transition: all .3s;
+}
+
+
+/* ============================================
+   HERO (sezione grande in cima alla homepage)
+   ============================================ */
+
 .hero {
   background: var(--ink);
   color: var(--bg);
   padding: 72px 5% 56px;
   border-bottom: 1px solid #2a2820;
 }
+
+/* eyebrow = la scritta piccola sopra al titolo */
 .eyebrow {
   font-family: var(--mono);
   font-size: .7rem;
-  letter-spacing: .18em;
+  letter-spacing: .18em;   /* spazio tra le lettere */
   text-transform: uppercase;
   color: var(--ora);
   margin-bottom: 18px;
 }
+
 .hero h1 {
+  /* clamp(min, preferito, max) - questa funzione è figa, l'abbiamo trovata su MDN
+     fa sì che il testo si ridimensioni in base alla larghezza dello schermo */
   font-size: clamp(2rem, 4.5vw, 3.6rem);
   font-weight: 800;
   letter-spacing: -.03em;
@@ -77,12 +141,29 @@ nav {
   margin-bottom: 18px;
 }
 .hero h1 em { font-style: normal; color: var(--ora); }
-.hero p { color: #aaa; max-width: 500px; font-size: 1rem; margin-bottom: 36px; }
+.hero p {
+  color: #aaa;
+  max-width: 500px;
+  font-size: 1rem;
+  margin-bottom: 36px;
+}
+
+/* le statistiche in basso nell'hero */
 .stats { display: flex; gap: 40px; flex-wrap: wrap; }
-.stat b { font-family: var(--mono); font-size: 1.5rem; color: #fff; display: block; line-height: 1; }
+.stat b {
+  font-family: var(--mono);
+  font-size: 1.5rem;
+  color: #fff;
+  display: block;  /* block per farlo andare a capo rispetto alla small */
+  line-height: 1;
+}
 .stat small { font-size: .78rem; color: #666; }
 
-/* PAGINA */
+
+/* ============================================
+   TITOLO PAGINA (usato nelle pagine interne)
+   ============================================ */
+
 .page-title {
   background: var(--ink);
   color: var(--bg);
@@ -90,14 +171,32 @@ nav {
   border-bottom: 1px solid #2a2820;
 }
 .page-title .eyebrow { margin-bottom: 10px; }
-.page-title h1 { font-size: 1.9rem; font-weight: 800; letter-spacing: -.02em; margin-bottom: 6px; }
+.page-title h1 {
+  font-size: 1.9rem;
+  font-weight: 800;
+  letter-spacing: -.02em;
+  margin-bottom: 6px;
+}
 .page-title p { color: #888; font-size: .92rem; }
 
-/* MAIN */
-.main { padding: 48px 5%; max-width: 1280px; margin: 0 auto; }
 
-/* SEZIONE */
+/* ============================================
+   CONTENUTO PRINCIPALE
+   ============================================ */
+
+.main {
+  padding: 48px 5%;
+  max-width: 1280px;
+  margin: 0 auto;  /* auto ai lati centra il blocco orizzontalmente */
+}
+
+
+/* ============================================
+   SEZIONI
+   ============================================ */
+
 .sezione { margin-bottom: 56px; }
+
 .sezione-head {
   display: flex;
   align-items: center;
@@ -107,6 +206,8 @@ nav {
   margin-bottom: 8px;
 }
 .sezione-head h2 { font-size: 1rem; font-weight: 700; }
+
+/* il pallino con il numero di risorse */
 .count {
   font-family: var(--mono);
   font-size: .7rem;
@@ -114,33 +215,62 @@ nav {
   border: 1px solid var(--border);
   color: var(--ink2);
   padding: 2px 8px;
-  border-radius: 20px;
+  border-radius: 20px;  /* border-radius alto lo rende una pillola */
 }
-.sezione-desc { font-size: .85rem; color: var(--ink2); margin-bottom: 18px; }
 
-/* GRIGLIA CARD */
-.griglia { display: grid; grid-template-columns: repeat(auto-fill, minmax(270px, 1fr)); gap: 14px; }
+.sezione-desc {
+  font-size: .85rem;
+  color: var(--ink2);
+  margin-bottom: 18px;
+}
 
-/* CARD */
+
+/* ============================================
+   GRIGLIA CARD
+   auto-fill con minmax è una cosa pazzesca: crea automaticamente le colonne
+   in base alla larghezza disponibile, senza bisogno di media query!
+   L'abbiamo trovata su CSS-Tricks, non l'abbiamo capita al 100% ma funziona
+   ============================================ */
+
+.griglia {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  gap: 14px;
+}
+
+
+/* ============================================
+   CARD
+   ============================================ */
+
 .card {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 18px 20px;
-  display: block;
+  display: block;       /* display block per occupare tutta la cella della griglia */
   text-decoration: none;
   color: var(--ink);
   transition: border-color .18s, box-shadow .18s, transform .15s;
 }
 .card:hover {
   border-color: var(--accent);
-  box-shadow: 0 4px 18px rgba(200,75,47,.12);
-  transform: translateY(-2px);
+  box-shadow: 0 4px 18px rgba(200,75,47,.12);  /* ombra con un po' di trasparenza */
+  transform: translateY(-2px);  /* si solleva di 2px al passaggio del mouse */
   text-decoration: none;
   color: var(--ink);
 }
-.card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 10px;
+}
+
 .card-icon { font-size: 1.4rem; }
+
+/* badge = l'etichetta tipo "Gratis", "A pagamento" ecc. */
 .badge {
   font-family: var(--mono);
   font-size: .62rem;
@@ -152,13 +282,14 @@ nav {
   background: var(--bg2);
   color: var(--ink2);
 }
-.badge.free  { background: #edf7ef; color: #2a6e3f; border-color: #b6e2c2; }
-.badge.paid  { background: #fff4ec; color: #b04a00; border-color: #f5c4a0; }
-.badge.open  { background: #eef3ff; color: #2a4ea8; border-color: #bccbf5; }
-.badge.win   { background: #f0f4ff; color: #1a3a90; border-color: #c0ccf0; }
+/* varianti colore del badge a seconda del tipo */
+.badge.free  { background: #edf7ef; color: #2a6e3f; border-color: #b6e2c2; }  /* verde */
+.badge.paid  { background: #fff4ec; color: #b04a00; border-color: #f5c4a0; }  /* arancione */
+.badge.open  { background: #eef3ff; color: #2a4ea8; border-color: #bccbf5; }  /* blu */
 
 .card h3 { font-size: .97rem; font-weight: 700; margin-bottom: 5px; }
 .card p  { font-size: .82rem; color: var(--ink2); margin-bottom: 14px; line-height: 1.5; }
+
 .card-link {
   font-family: var(--mono);
   font-size: .7rem;
@@ -167,9 +298,9 @@ nav {
   align-items: center;
   gap: 4px;
 }
-.card-link::after { content: '→'; }
+.card-link::after { content: '→'; }  /* la freccia dopo il link, aggiunta con CSS puro */
 
-/* CARD SCURA (highlight) */
+/* versione scura della card (per le risorse in evidenza) */
 .card-dark {
   background: var(--ink);
   border-color: #2a2820;
@@ -180,7 +311,198 @@ nav {
 .card-dark .card-link { color: var(--ora); }
 .card-dark .badge { background: #2a2820; color: #888; border-color: #383530; }
 
-/* FOOTER */
+
+/* ============================================
+   BARRA DI RICERCA (aggiunta da Lorenzo con aiuto IA)
+   ============================================ */
+
+.search-box {
+  margin-bottom: 28px;
+}
+.search-box input {
+  width: 100%;
+  max-width: 440px;
+  padding: 10px 16px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-family: var(--sans);
+  font-size: .9rem;
+  background: var(--card);
+  color: var(--ink);
+  outline: none;
+  transition: border-color .2s;
+}
+.search-box input:focus {
+  border-color: var(--accent);  /* bordo rosso quando si clicca sull'input */
+}
+.search-box input::placeholder { color: #aaa; }
+
+/* messaggio che appare se la ricerca non trova nulla */
+.nessun-risultato {
+  display: none;  /* nascosto di default, JS lo mostra se serve */
+  color: var(--ink2);
+  font-size: .9rem;
+  padding: 20px 0;
+}
+
+
+/* ============================================
+   BOTTONE TORNA SU
+   position fixed lo mette fisso in basso a destra anche scrollando
+   ============================================ */
+
+#torna-su {
+  display: none;   /* nascosto, JS lo fa apparire dopo un po' di scroll */
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;   /* cerchio perfetto */
+  font-size: 1.1rem;
+  cursor: pointer;
+  z-index: 100;
+  box-shadow: 0 4px 14px rgba(0,0,0,.2);
+  transition: background .2s, transform .2s;
+}
+#torna-su:hover {
+  background: var(--ora);
+  transform: translateY(-3px);
+}
+
+
+/* ============================================
+   SEZIONE "CHI SIAMO" (pagina contatti)
+   ============================================ */
+
+.chi-siamo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.profilo-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 28px 24px;
+  text-align: center;
+}
+
+.profilo-avatar {
+  font-size: 3rem;
+  margin-bottom: 14px;
+  display: block;
+}
+
+.profilo-card h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.profilo-card .ruolo {
+  font-family: var(--mono);
+  font-size: .72rem;
+  color: var(--accent);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.profilo-card p {
+  font-size: .85rem;
+  color: var(--ink2);
+  line-height: 1.6;
+}
+
+.tag-lista {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 14px;
+}
+
+.tag {
+  font-family: var(--mono);
+  font-size: .65rem;
+  padding: 3px 8px;
+  border-radius: 4px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  color: var(--ink2);
+}
+
+
+/* ============================================
+   DOMANDE FREQUENTI (FAQ) - pagina contatti
+   ============================================ */
+
+.faq-lista { margin-top: 20px; }
+
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 10px;
+  background: var(--card);
+  overflow: hidden;  /* nasconde il contenuto che sporge fuori */
+}
+
+/* questa parte è quella su cui si clicca */
+.faq-domanda {
+  padding: 16px 20px;
+  font-weight: 700;
+  font-size: .92rem;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  user-select: none;  /* non permette di selezionare il testo per sbaglio */
+}
+
+.faq-domanda::after {
+  content: '+';
+  font-size: 1.2rem;
+  color: var(--ink2);
+  transition: transform .25s;
+}
+
+/* quando la faq è aperta cambia il + in x ruotando */
+.faq-item.aperta .faq-domanda::after {
+  transform: rotate(45deg);
+}
+
+.faq-risposta {
+  display: none;   /* nascosta di default, JS la mostra */
+  padding: 0 20px 16px;
+  font-size: .85rem;
+  color: var(--ink2);
+  line-height: 1.6;
+}
+
+.faq-item.aperta .faq-risposta { display: block; }
+
+
+/* ============================================
+   CONTATORE ANIMATO (nella homepage)
+   -- questa parte l'ha fatta l'IA, vedi script.js per la spiegazione
+   ============================================ */
+
+.stat b.animato {
+  display: inline-block;
+}
+
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
 footer {
   background: var(--ink);
   color: #555;
@@ -191,12 +513,39 @@ footer {
   font-family: var(--mono);
   font-size: .75rem;
   margin-top: 60px;
+  flex-wrap: wrap;
+  gap: 10px;
 }
-footer span { color: var(--ora); }
+footer .brand-footer { color: var(--ora); }
+footer a { color: #555; text-decoration: none; }
+footer a:hover { color: #888; }
 
-/* MOBILE */
+
+/* ============================================
+   RESPONSIVE / MOBILE
+   sotto 640px cambia il layout
+   ============================================ */
+
 @media (max-width: 640px) {
-  .nav-links a { font-size: .75rem; padding: 5px 8px; }
+  /* navbar: nasconde i link e mostra l'hamburger */
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 58px;
+    left: 0;
+    right: 0;
+    background: var(--ink);
+    flex-direction: column;
+    padding: 12px 5%;
+    gap: 2px;
+    border-top: 1px solid #2a2820;
+  }
+  .nav-links.aperta { display: flex; }  /* JS aggiunge questa classe */
+  .hamburger { display: flex; }
+
   .stats { gap: 24px; }
-  .griglia { grid-template-columns: 1fr; }
+  .griglia { grid-template-columns: 1fr; }  /* una colonna sola su mobile */
+  .chi-siamo-grid { grid-template-columns: 1fr; }
+
+  footer { flex-direction: column; text-align: center; }
 }
