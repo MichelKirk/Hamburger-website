@@ -1,191 +1,180 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Programmi – DevHub</title>
-  <link rel="stylesheet" href="style.css">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Programmi – DevHub</title>
+ <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav>
-  <a href="index.html" class="brand">&lt;<span>Dev</span>Hub /&gt;</a>
-  <div class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="imparare.html">Imparare</a>
-    <a href="design.html">Design</a>
-    <a href="sviluppo.html">Sviluppo</a>
-    <a href="programmi.html">Programmi</a>
-    <a href="contatti.html">Chi siamo</a>
-  </div>
+ <a href="index.html" class="brand">&lt;<span>Dev</span>Hub /&gt;</a>
+ <div class="nav-links">
+ <a href="index.html">Home</a>
+ <a href="imparare.html">Imparare</a>
+ <a href="design.html">Design</a>
+ <a href="sviluppo.html">Sviluppo</a>
+ <a href="programmi.html">Programmi</a>
+ <a href="contatti.html">Chi siamo</a>
+ </div>
 </nav>
 
 
 <div class="page-title">
-  <div class="eyebrow">Categoria · Software da installare</div>
-  <h1>💻 Programmi</h1>
-  <p>Software da scaricare e installare sul proprio computer per lavorare in modo professionale. Editor, browser, strumenti di versionamento.</p>
+ <div class="eyebrow">Categoria · Software da installare</div>
+ <h1> Programmi</h1>
+ <p>Software da scaricare e installare sul proprio computer per lavorare in modo professionale. Editor, browser, strumenti di versionamento.</p>
 </div>
 
 
 <div class="main">
 
-  <div class="search-box">
-    <input type="text" id="ricerca" placeholder="Cerca un programma... (es. editor, Windows, gratis)">
-  </div>
-  <p class="nessun-risultato">Nessun programma trovato. Prova con un altro termine.</p>
+ <!-- ESSENZIALI -->
+ <div class="sezione">
+ <div class="sezione-head">
+ <h2>Quelli da installare subito</h2>
+ <span class="count">4 programmi</span>
+ </div>
+ <p class="sezione-desc">
+ Se non hai ancora questi quattro programmi, installali adesso. Sono il minimo indispensabile
+ per chiunque voglia fare sviluppo web. Tutti e quattro sono gratuiti.
+ </p>
+
+ <div class="griglia">
+
+ <a class="card card-dark" href="https://code.visualstudio.com" target="_blank" rel="noopener">
+ <div class="card-top"><div class="card-icon"></div><span class="badge free">Gratis</span></div>
+ <h3>Visual Studio Code</h3>
+ <p>
+ L'editor di codice più usato al mondo. Leggero, veloce, con migliaia di estensioni scaricabili
+ gratuitamente. Supporta qualsiasi linguaggio di programmazione. Funziona su Windows, Mac e Linux.
+ Abbiamo usato questo per fare tutto il progetto.
+ </p>
+ <!-- indica su quali sistemi operativi funziona -->
+ <span class="badge" style="margin-bottom: 10px;">Windows / Mac / Linux</span>
+ <br>
+ <span class="card-link">code.visualstudio.com</span>
+ </a>
+
+ <a class="card" href="https://git-scm.com" target="_blank" rel="noopener">
+ <div class="card-top"><div class="card-icon"></div><span class="badge open">Open Source</span></div>
+ <h3>Git</h3>
+ <p>
+ Il sistema di controllo versione usato praticamente da tutti gli sviluppatori del mondo.
+ Si installa sul computer e permette di gestire le versioni del codice tramite terminale.
+ Indispensabile per usare GitHub. Senza Git non si può fare git commit, git push ecc.
+ </p>
+ <span class="badge" style="margin-bottom: 10px;">Windows / Mac / Linux</span>
+ <br>
+ <span class="card-link">git-scm.com</span>
+ </a>
+
+ <a class="card" href="https://www.google.com/intl/it/chrome" target="_blank" rel="noopener">
+ <div class="card-top"><div class="card-icon"></div><span class="badge free">Gratis</span></div>
+ <h3>Google Chrome</h3>
+ <p>
+ Il browser preferito dagli sviluppatori grazie agli strumenti per sviluppatori (DevTools)
+ integrati. Con F12 si apre un pannello dove si può ispezionare l'HTML, vedere il CSS applicato,
+ debuggare il JavaScript e simulare come appare il sito su uno smartphone.
+ </p>
+ <span class="badge" style="margin-bottom: 10px;">Windows / Mac / Linux</span>
+ <br>
+ <span class="card-link">google.com/chrome</span>
+ </a>
+
+ <a class="card" href="https://www.figma.com/downloads" target="_blank" rel="noopener">
+ <div class="card-top"><div class="card-icon"></div><span class="badge free">Freemium</span></div>
+ <h3>Figma Desktop</h3>
+ <p>
+ Versione desktop di Figma. Funziona esattamente come la versione web ma è più veloce
+ e reattiva, soprattutto con file di design grandi. Utile se si lavora spesso con Figma e
+ si vuole una finestra dedicata senza aprire il browser.
+ </p>
+ <span class="badge" style="margin-bottom: 10px;">Windows / Mac</span>
+ <br>
+ <span class="card-link">figma.com/downloads</span>
+ </a>
+
+ </div>
+ </div><!-- /essenziali -->
 
 
-  <!-- ─────────── ESSENZIALI ─────────── -->
-  <div class="sezione">
-    <div class="sezione-head">
-      <h2>Quelli da installare subito</h2>
-      <span class="count">4 programmi</span>
-    </div>
-    <p class="sezione-desc">
-      Se non hai ancora questi quattro programmi, installali adesso. Sono il minimo indispensabile
-      per chiunque voglia fare sviluppo web. Tutti e quattro sono gratuiti.
-    </p>
+ <!-- AVANZATI -->
+ <div class="sezione">
+ <div class="sezione-head">
+ <h2>Strumenti più avanzati</h2>
+ <span class="count">4 programmi</span>
+ </div>
+ <p class="sezione-desc">
+ Questi programmi si usano di più in ambito professionale. Non sono necessari subito, ma è utile
+ sapere che esistono per quando si andrà a lavorare o si faranno progetti più grandi.
+ </p>
 
-    <div class="griglia">
+ <div class="griglia">
 
-      <a class="card card-dark" href="https://code.visualstudio.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🔵</div><span class="badge free">Gratis</span></div>
-        <h3>Visual Studio Code</h3>
-        <p>
-          L'editor di codice più usato al mondo. Leggero, veloce, con migliaia di estensioni scaricabili
-          gratuitamente. Supporta qualsiasi linguaggio di programmazione. Funziona su Windows, Mac e Linux.
-          Abbiamo usato questo per fare tutto il progetto.
-        </p>
-        <!-- indica su quali sistemi operativi funziona -->
-        <span class="badge" style="margin-bottom: 10px;">Windows / Mac / Linux</span>
-        <br>
-        <span class="card-link">code.visualstudio.com</span>
-      </a>
+ <a class="card" href="https://www.postman.com/downloads" target="_blank" rel="noopener">
+ <div class="card-top"><div class="card-icon"></div><span class="badge free">Freemium</span></div>
+ <h3>Postman</h3>
+ <p>
+ Strumento per testare le API REST. Un'API è come un "portale" che un server mette a disposizione
+ per ricevere e inviare dati. Con Postman si possono inviare richieste HTTP (GET, POST, PUT, DELETE)
+ e vedere la risposta del server. Molto usato nel backend development.
+ </p>
+ <span class="badge" style="margin-bottom: 10px;">Windows / Mac / Linux</span>
+ <br>
+ <span class="card-link">postman.com</span>
+ </a>
 
-      <a class="card" href="https://git-scm.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🌿</div><span class="badge open">Open Source</span></div>
-        <h3>Git</h3>
-        <p>
-          Il sistema di controllo versione usato praticamente da tutti gli sviluppatori del mondo.
-          Si installa sul computer e permette di gestire le versioni del codice tramite terminale.
-          Indispensabile per usare GitHub. Senza Git non si può fare git commit, git push ecc.
-        </p>
-        <span class="badge" style="margin-bottom: 10px;">Windows / Mac / Linux</span>
-        <br>
-        <span class="card-link">git-scm.com</span>
-      </a>
+ <a class="card" href="https://www.docker.com/products/docker-desktop" target="_blank" rel="noopener">
+ <div class="card-top"><div class="card-icon"></div><span class="badge free">Freemium</span></div>
+ <h3>Docker Desktop</h3>
+ <p>
+ Permette di creare ambienti di sviluppo isolati chiamati "container". Ogni container ha le sue
+ dipendenze e funziona allo stesso modo su qualsiasi computer. È la soluzione al classico problema
+ "sul mio computer funziona ma sul tuo no". Standard nel mondo professionale.
+ </p>
+ <span class="badge" style="margin-bottom: 10px;">Windows / Mac / Linux</span>
+ <br>
+ <span class="card-link">docker.com</span>
+ </a>
 
-      <a class="card" href="https://www.google.com/intl/it/chrome" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🌐</div><span class="badge free">Gratis</span></div>
-        <h3>Google Chrome</h3>
-        <p>
-          Il browser preferito dagli sviluppatori grazie agli strumenti per sviluppatori (DevTools)
-          integrati. Con F12 si apre un pannello dove si può ispezionare l'HTML, vedere il CSS applicato,
-          debuggare il JavaScript e simulare come appare il sito su uno smartphone.
-        </p>
-        <span class="badge" style="margin-bottom: 10px;">Windows / Mac / Linux</span>
-        <br>
-        <span class="card-link">google.com/chrome</span>
-      </a>
+ <a class="card" href="https://tableplus.com" target="_blank" rel="noopener">
+ <div class="card-top"><div class="card-icon"></div><span class="badge free">Freemium</span></div>
+ <h3>TablePlus</h3>
+ <p>
+ Client per la gestione di database con un'interfaccia grafica moderna. Supporta MySQL, PostgreSQL,
+ SQLite e altri. Permette di vedere i dati del database in tabelle, fare query SQL e modificare i
+ record direttamente senza riga di comando. Molto più comodo di lavorare da terminale.
+ </p>
+ <span class="badge" style="margin-bottom: 10px;">Windows / Mac</span>
+ <br>
+ <span class="card-link">tableplus.com</span>
+ </a>
 
-      <a class="card" href="https://www.figma.com/downloads" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🖼️</div><span class="badge free">Freemium</span></div>
-        <h3>Figma Desktop</h3>
-        <p>
-          Versione desktop di Figma. Funziona esattamente come la versione web ma è più veloce
-          e reattiva, soprattutto con file di design grandi. Utile se si lavora spesso con Figma e
-          si vuole una finestra dedicata senza aprire il browser.
-        </p>
-        <span class="badge" style="margin-bottom: 10px;">Windows / Mac</span>
-        <br>
-        <span class="card-link">figma.com/downloads</span>
-      </a>
+ <a class="card" href="https://www.adobe.com/it/products/photoshop.html" target="_blank" rel="noopener">
+ <div class="card-top"><div class="card-icon"></div><span class="badge paid">A pagamento</span></div>
+ <h3>Adobe Photoshop</h3>
+ <p>
+ Il software professionale per il ritocco fotografico e la grafica raster. È a pagamento (abbonamento
+ mensile) ma è lo standard dell'industria per il design visivo. Per la maggior parte dei progetti
+ scolastici si può usare Figma o strumenti gratuiti, ma Photoshop è una cosa che molte aziende richiedono.
+ </p>
+ <span class="badge" style="margin-bottom: 10px;">Windows / Mac</span>
+ <br>
+ <span class="card-link">adobe.com/photoshop</span>
+ </a>
 
-    </div>
-  </div><!-- /essenziali -->
-
-
-  <!-- ─────────── AVANZATI ─────────── -->
-  <div class="sezione">
-    <div class="sezione-head">
-      <h2>Strumenti più avanzati</h2>
-      <span class="count">4 programmi</span>
-    </div>
-    <p class="sezione-desc">
-      Questi programmi si usano di più in ambito professionale. Non sono necessari subito, ma è utile
-      sapere che esistono per quando si andrà a lavorare o si faranno progetti più grandi.
-    </p>
-
-    <div class="griglia">
-
-      <a class="card" href="https://www.postman.com/downloads" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">📮</div><span class="badge free">Freemium</span></div>
-        <h3>Postman</h3>
-        <p>
-          Strumento per testare le API REST. Un'API è come un "portale" che un server mette a disposizione
-          per ricevere e inviare dati. Con Postman si possono inviare richieste HTTP (GET, POST, PUT, DELETE)
-          e vedere la risposta del server. Molto usato nel backend development.
-        </p>
-        <span class="badge" style="margin-bottom: 10px;">Windows / Mac / Linux</span>
-        <br>
-        <span class="card-link">postman.com</span>
-      </a>
-
-      <a class="card" href="https://www.docker.com/products/docker-desktop" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🐳</div><span class="badge free">Freemium</span></div>
-        <h3>Docker Desktop</h3>
-        <p>
-          Permette di creare ambienti di sviluppo isolati chiamati "container". Ogni container ha le sue
-          dipendenze e funziona allo stesso modo su qualsiasi computer. È la soluzione al classico problema
-          "sul mio computer funziona ma sul tuo no". Standard nel mondo professionale.
-        </p>
-        <span class="badge" style="margin-bottom: 10px;">Windows / Mac / Linux</span>
-        <br>
-        <span class="card-link">docker.com</span>
-      </a>
-
-      <a class="card" href="https://tableplus.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🗄️</div><span class="badge free">Freemium</span></div>
-        <h3>TablePlus</h3>
-        <p>
-          Client per la gestione di database con un'interfaccia grafica moderna. Supporta MySQL, PostgreSQL,
-          SQLite e altri. Permette di vedere i dati del database in tabelle, fare query SQL e modificare i
-          record direttamente senza riga di comando. Molto più comodo di lavorare da terminale.
-        </p>
-        <span class="badge" style="margin-bottom: 10px;">Windows / Mac</span>
-        <br>
-        <span class="card-link">tableplus.com</span>
-      </a>
-
-      <a class="card" href="https://www.adobe.com/it/products/photoshop.html" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🖌️</div><span class="badge paid">A pagamento</span></div>
-        <h3>Adobe Photoshop</h3>
-        <p>
-          Il software professionale per il ritocco fotografico e la grafica raster. È a pagamento (abbonamento
-          mensile) ma è lo standard dell'industria per il design visivo. Per la maggior parte dei progetti
-          scolastici si può usare Figma o strumenti gratuiti, ma Photoshop è una cosa che molte aziende richiedono.
-        </p>
-        <span class="badge" style="margin-bottom: 10px;">Windows / Mac</span>
-        <br>
-        <span class="card-link">adobe.com/photoshop</span>
-      </a>
-
-    </div>
-  </div><!-- /avanzati -->
+ </div>
+ </div><!-- /avanzati -->
 
 </div><!-- /main -->
 
 
 <footer>
-  <span class="brand-footer">&lt;DevHub /&gt;</span>
-  <span>Progetto scolastico · Matteo R. e Lorenzo B. · 3^B · 2025/2026</span>
-  <span>Tutti i link rimandano a siti esterni.</span>
+ <span class="brand-footer">&lt;DevHub /&gt;</span>
+ <span>Progetto scolastico · Matteo R. e Lorenzo B. · 3^B · 2025/2026</span>
+ <span>Tutti i link rimandano a siti esterni.</span>
 </footer>
 
 <button id="torna-su" title="Torna in cima">↑</button>

@@ -1,150 +1,139 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Design – DevHub</title>
-  <link rel="stylesheet" href="style.css">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Design – DevHub</title>
+ <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav>
-  <a href="index.html" class="brand">&lt;<span>Dev</span>Hub /&gt;</a>
-  <div class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="imparare.html">Imparare</a>
-    <a href="design.html">Design</a>
-    <a href="sviluppo.html">Sviluppo</a>
-    <a href="programmi.html">Programmi</a>
-    <a href="contatti.html">Chi siamo</a>
-  </div>
+ <a href="index.html" class="brand">&lt;<span>Dev</span>Hub /&gt;</a>
+ <div class="nav-links">
+ <a href="index.html">Home</a>
+ <a href="imparare.html">Imparare</a>
+ <a href="design.html">Design</a>
+ <a href="sviluppo.html">Sviluppo</a>
+ <a href="programmi.html">Programmi</a>
+ <a href="contatti.html">Chi siamo</a>
+ </div>
 </nav>
 
 
 <div class="page-title">
-  <div class="eyebrow">Categoria · Interfacce e grafica</div>
-  <h1>🎨 Design</h1>
-  <p>Strumenti per creare interfacce, trovare ispirazione, scegliere font e colori. Dal prototipo al prodotto finito.</p>
+ <div class="eyebrow">Categoria · Interfacce e grafica</div>
+ <h1> Design</h1>
+ <p>Strumenti per creare interfacce, trovare ispirazione, scegliere font e colori. Dal prototipo al prodotto finito.</p>
 </div>
 
 
 <div class="main">
 
-  <div class="search-box">
-    <input type="text" id="ricerca" placeholder="Cerca uno strumento... (es. font, colori, prototipo)">
-  </div>
-  <p class="nessun-risultato">Nessuno strumento trovato. Prova con un altro termine.</p>
+ <!-- PROTOTIPAZIONE -->
+ <div class="sezione">
+ <div class="sezione-head">
+ <h2>Prototipazione e UI Design</h2>
+ <span class="count">3 risorse</span>
+ </div>
+ <p class="sezione-desc">Strumenti per progettare l'aspetto di un sito o di un'app prima di scrivere una riga di codice.</p>
+
+ <div class="griglia">
+
+ <a class="card card-dark" href="https://www.figma.com" target="_blank" rel="noopener">
+ <div class="card-top"><div class="card-icon"></div><span class="badge free">Freemium</span></div>
+ <h3>Figma</h3>
+ <p>Lo strumento di design collaborativo più usato al mondo. Prototipazione, wireframe e UI design tutto nel browser senza installare niente. La versione gratuita permette di fare quasi tutto quello di cui si ha bisogno.</p>
+ <span class="card-link">figma.com</span>
+ </a>
+
+ <a class="card" href="https://excalidraw.com" target="_blank" rel="noopener">
+ <div class="card-top"><div class="card-icon"></div><span class="badge open">Open Source</span></div>
+ <h3>Excalidraw</h3>
+ <p>Lavagna virtuale per disegnare schemi, wireframe e diagrammi in stile "disegnato a mano". Open source, collaborativo e non richiede nessun account. Ottimo per fare schizzi rapidi prima di passare a Figma.</p>
+ <span class="card-link">excalidraw.com</span>
+ </a>
+
+ <a class="card" href="https://dribbble.com" target="_blank" rel="noopener">
+ <div class="card-top"><div class="card-icon"></div><span class="badge free">Gratis</span></div>
+ <h3>Dribbble</h3>
+ <p>La piattaforma di riferimento per l'ispirazione UI/UX. Milioni di progetti di designer professionisti da tutto il mondo. Quando non si sa come impostare una pagina, si va su Dribbble a cercare ispirazione.</p>
+ <span class="card-link">dribbble.com</span>
+ </a>
+
+ </div>
+ </div>
 
 
-  <!-- ─────────── PROTOTIPAZIONE ─────────── -->
-  <div class="sezione">
-    <div class="sezione-head">
-      <h2>Prototipazione e UI Design</h2>
-      <span class="count">3 risorse</span>
-    </div>
-    <p class="sezione-desc">Strumenti per progettare l'aspetto di un sito o di un'app prima di scrivere una riga di codice.</p>
+ <!-- COLORI E FONT -->
+ <div class="sezione">
+ <div class="sezione-head">
+ <h2>Colori e font</h2>
+ <span class="count">3 risorse</span>
+ </div>
+ <p class="sezione-desc">Scegliere i colori giusti e il font giusto fa una differenza enorme nell'aspetto di un sito.</p>
 
-    <div class="griglia">
+ <div class="griglia">
 
-      <a class="card card-dark" href="https://www.figma.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🖼️</div><span class="badge free">Freemium</span></div>
-        <h3>Figma</h3>
-        <p>Lo strumento di design collaborativo più usato al mondo. Prototipazione, wireframe e UI design tutto nel browser senza installare niente. La versione gratuita permette di fare quasi tutto quello di cui si ha bisogno.</p>
-        <span class="card-link">figma.com</span>
-      </a>
+ <a class="card" href="https://coolors.co" target="_blank" rel="noopener">
+ <div class="card-top"><div class="card-icon"></div><span class="badge free">Gratis</span></div>
+ <h3>Coolors</h3>
+ <p>Generatore di palette colori professionali. Premi la barra spaziatrice e genera combinazioni di colori armoniose all'infinito. Esporta in HEX, RGB e CSS. Abbiamo usato questo per trovare i colori di DevHub.</p>
+ <span class="card-link">coolors.co</span>
+ </a>
 
-      <a class="card" href="https://excalidraw.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">✏️</div><span class="badge open">Open Source</span></div>
-        <h3>Excalidraw</h3>
-        <p>Lavagna virtuale per disegnare schemi, wireframe e diagrammi in stile "disegnato a mano". Open source, collaborativo e non richiede nessun account. Ottimo per fare schizzi rapidi prima di passare a Figma.</p>
-        <span class="card-link">excalidraw.com</span>
-      </a>
+ <a class="card" href="https://fonts.google.com" target="_blank" rel="noopener">
+ <div class="card-top"><div class="card-icon"></div><span class="badge free">Gratis</span></div>
+ <h3>Google Fonts</h3>
+ <p>Oltre 1500 font gratuiti da usare nei propri siti web. Basta copiare il link CSS che Google fornisce e il font si carica automaticamente. I font di questo sito vengono da qui.</p>
+ <span class="card-link">fonts.google.com</span>
+ </a>
 
-      <a class="card" href="https://dribbble.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🏀</div><span class="badge free">Gratis</span></div>
-        <h3>Dribbble</h3>
-        <p>La piattaforma di riferimento per l'ispirazione UI/UX. Milioni di progetti di designer professionisti da tutto il mondo. Quando non si sa come impostare una pagina, si va su Dribbble a cercare ispirazione.</p>
-        <span class="card-link">dribbble.com</span>
-      </a>
+ <a class="card" href="https://fontawesome.com" target="_blank" rel="noopener">
+ <div class="card-top"><div class="card-icon"></div><span class="badge free">Freemium</span></div>
+ <h3>Font Awesome</h3>
+ <p>La libreria di icone più usata nel web. Migliaia di icone vettoriali da inserire nel codice HTML come se fossero caratteri. La versione gratuita ha già tutto il necessario per la maggior parte dei progetti.</p>
+ <span class="card-link">fontawesome.com</span>
+ </a>
 
-    </div>
-  </div>
-
-
-  <!-- ─────────── COLORI E FONT ─────────── -->
-  <div class="sezione">
-    <div class="sezione-head">
-      <h2>Colori e font</h2>
-      <span class="count">3 risorse</span>
-    </div>
-    <p class="sezione-desc">Scegliere i colori giusti e il font giusto fa una differenza enorme nell'aspetto di un sito.</p>
-
-    <div class="griglia">
-
-      <a class="card" href="https://coolors.co" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🎨</div><span class="badge free">Gratis</span></div>
-        <h3>Coolors</h3>
-        <p>Generatore di palette colori professionali. Premi la barra spaziatrice e genera combinazioni di colori armoniose all'infinito. Esporta in HEX, RGB e CSS. Abbiamo usato questo per trovare i colori di DevHub.</p>
-        <span class="card-link">coolors.co</span>
-      </a>
-
-      <a class="card" href="https://fonts.google.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🔤</div><span class="badge free">Gratis</span></div>
-        <h3>Google Fonts</h3>
-        <p>Oltre 1500 font gratuiti da usare nei propri siti web. Basta copiare il link CSS che Google fornisce e il font si carica automaticamente. I font di questo sito vengono da qui.</p>
-        <span class="card-link">fonts.google.com</span>
-      </a>
-
-      <a class="card" href="https://fontawesome.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">⭐</div><span class="badge free">Freemium</span></div>
-        <h3>Font Awesome</h3>
-        <p>La libreria di icone più usata nel web. Migliaia di icone vettoriali da inserire nel codice HTML come se fossero caratteri. La versione gratuita ha già tutto il necessario per la maggior parte dei progetti.</p>
-        <span class="card-link">fontawesome.com</span>
-      </a>
-
-    </div>
-  </div>
+ </div>
+ </div>
 
 
-  <!-- ─────────── IMMAGINI ─────────── -->
-  <div class="sezione">
-    <div class="sezione-head">
-      <h2>Immagini e icone</h2>
-      <span class="count">2 risorse</span>
-    </div>
-    <p class="sezione-desc">Immagini e icone da usare liberamente nei propri progetti, senza problemi di copyright.</p>
+ <!-- IMMAGINI -->
+ <div class="sezione">
+ <div class="sezione-head">
+ <h2>Immagini e icone</h2>
+ <span class="count">2 risorse</span>
+ </div>
+ <p class="sezione-desc">Immagini e icone da usare liberamente nei propri progetti, senza problemi di copyright.</p>
 
-    <div class="griglia">
+ <div class="griglia">
 
-      <a class="card" href="https://unsplash.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">📷</div><span class="badge free">Gratis</span></div>
-        <h3>Unsplash</h3>
-        <p>Foto professionali ad alta risoluzione gratuite da usare in qualsiasi progetto, anche commerciale. Non serve l'attribuzione. La qualità è altissima e si trovano immagini per qualsiasi tema.</p>
-        <span class="card-link">unsplash.com</span>
-      </a>
+ <a class="card" href="https://unsplash.com" target="_blank" rel="noopener">
+ <div class="card-top"><div class="card-icon"></div><span class="badge free">Gratis</span></div>
+ <h3>Unsplash</h3>
+ <p>Foto professionali ad alta risoluzione gratuite da usare in qualsiasi progetto, anche commerciale. Non serve l'attribuzione. La qualità è altissima e si trovano immagini per qualsiasi tema.</p>
+ <span class="card-link">unsplash.com</span>
+ </a>
 
-      <a class="card" href="https://www.svgrepo.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🔷</div><span class="badge free">Gratis</span></div>
-        <h3>SVG Repo</h3>
-        <p>500.000+ icone e illustrazioni in formato SVG da scaricare e usare liberamente. Gli SVG sono perfetti per il web perché si ridimensionano senza perdere qualità e pesano pochissimo.</p>
-        <span class="card-link">svgrepo.com</span>
-      </a>
+ <a class="card" href="https://www.svgrepo.com" target="_blank" rel="noopener">
+ <div class="card-top"><div class="card-icon"></div><span class="badge free">Gratis</span></div>
+ <h3>SVG Repo</h3>
+ <p>500.000+ icone e illustrazioni in formato SVG da scaricare e usare liberamente. Gli SVG sono perfetti per il web perché si ridimensionano senza perdere qualità e pesano pochissimo.</p>
+ <span class="card-link">svgrepo.com</span>
+ </a>
 
-    </div>
-  </div>
+ </div>
+ </div>
 
 </div><!-- /main -->
 
 
 <footer>
-  <span class="brand-footer">&lt;DevHub /&gt;</span>
-  <span>Progetto scolastico · Matteo R. e Lorenzo B. · 3^B · 2025/2026</span>
-  <span>Tutti i link rimandano a siti esterni.</span>
+ <span class="brand-footer">&lt;DevHub /&gt;</span>
+ <span>Progetto scolastico · Matteo R. e Lorenzo B. · 3^B · 2025/2026</span>
+ <span>Tutti i link rimandano a siti esterni.</span>
 </footer>
 
 <button id="torna-su" title="Torna in cima">↑</button>

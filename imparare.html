@@ -1,145 +1,133 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Imparare – DevHub</title>
-  <link rel="stylesheet" href="style.css">
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Imparare – DevHub</title>
+ <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <nav>
-  <a href="index.html" class="brand">&lt;<span>Dev</span>Hub /&gt;</a>
-  <div class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
-  </div>
-  <div class="nav-links">
-    <a href="index.html">Home</a>
-    <a href="imparare.html">Imparare</a>
-    <a href="design.html">Design</a>
-    <a href="sviluppo.html">Sviluppo</a>
-    <a href="programmi.html">Programmi</a>
-    <a href="contatti.html">Chi siamo</a>
-  </div>
+ <a href="index.html" class="brand">&lt;<span>Dev</span>Hub /&gt;</a>
+ <div class="nav-links">
+ <a href="index.html">Home</a>
+ <a href="imparare.html">Imparare</a>
+ <a href="design.html">Design</a>
+ <a href="sviluppo.html">Sviluppo</a>
+ <a href="programmi.html">Programmi</a>
+ <a href="contatti.html">Chi siamo</a>
+ </div>
 </nav>
 
 
 <!-- titolo della pagina interna -->
 <div class="page-title">
-  <div class="eyebrow">Categoria · Formazione</div>
-  <h1>📚 Imparare</h1>
-  <p>Piattaforme e siti per imparare programmazione, design e tecnologia. Dai corsi video alla documentazione ufficiale.</p>
+ <div class="eyebrow">Categoria · Formazione</div>
+ <h1> Imparare</h1>
+ <p>Piattaforme e siti per imparare programmazione, design e tecnologia. Dai corsi video alla documentazione ufficiale.</p>
 </div>
 
 
 <div class="main">
 
-  <!-- barra di ricerca - il filtro è gestito da script.js -->
-  <div class="search-box">
-    <input type="text" id="ricerca" placeholder="Cerca una risorsa... (es. JavaScript, gratis, certificato)">
-  </div>
-  <p class="nessun-risultato">Nessuna risorsa trovata per questa ricerca. Prova con un altro termine.</p>
+ <!-- GRATIS -->
+ <div class="sezione">
+ <div class="sezione-head">
+ <h2>Risorse gratuite</h2>
+ <span class="count">7 risorse</span>
+ </div>
+ <p class="sezione-desc">Queste non costano niente. Alcune hanno anche certificazioni gratuite che si possono mettere nel curriculum.</p>
+
+ <div class="griglia">
+
+ <a class="card card-dark" href="https://developer.mozilla.org" target="_blank" rel="noopener">
+ <div class="card-top"><div class="card-icon"></div><span class="badge free">Gratis</span></div>
+ <h3>MDN Web Docs</h3>
+ <p>La documentazione ufficiale di HTML, CSS e JavaScript. Il riferimento numero uno per ogni sviluppatore web, curato da Mozilla. Se non sai come funziona una proprietà CSS, cerchi qui.</p>
+ <span class="card-link">developer.mozilla.org</span>
+ </a>
+
+ <a class="card" href="https://www.freecodecamp.org" target="_blank" rel="noopener">
+ <div class="card-top"><div class="card-icon"></div><span class="badge free">Gratis</span></div>
+ <h3>freeCodeCamp</h3>
+ <p>Corsi completi su sviluppo web, Python, data science e molto altro. Le certificazioni sono gratuite e si ottengono completando progetti pratici reali. È una delle piattaforme più usate al mondo.</p>
+ <span class="card-link">freecodecamp.org</span>
+ </a>
+
+ <a class="card" href="https://www.theodinproject.com" target="_blank" rel="noopener">
+ <div class="card-top"><div class="card-icon"></div><span class="badge free">Gratis</span></div>
+ <h3>The Odin Project</h3>
+ <p>Curriculum open source per diventare sviluppatore full-stack. Percorso strutturato con HTML, CSS, JavaScript e poi Ruby o Node.js. Molto pratico, si fanno tanti progetti.</p>
+ <span class="card-link">theodinproject.com</span>
+ </a>
+
+ <a class="card" href="https://cs50.harvard.edu" target="_blank" rel="noopener">
+ <div class="card-top"><div class="card-icon"></div><span class="badge free">Gratis</span></div>
+ <h3>CS50 – Harvard</h3>
+ <p>Il corso di informatica più famoso al mondo, offerto gratuitamente da Harvard su edX. Copre algoritmi, strutture dati, C, Python, SQL e sviluppo web. Vale veramente tanto come esperienza.</p>
+ <span class="card-link">cs50.harvard.edu</span>
+ </a>
+
+ <a class="card" href="https://www.w3schools.com" target="_blank" rel="noopener">
+ <div class="card-top"><div class="card-icon"></div><span class="badge free">Gratis</span></div>
+ <h3>W3Schools</h3>
+ <p>Riferimento rapido per HTML, CSS, JavaScript, SQL, Python e altro ancora. Ideale per controllare la sintassi di un comando e fare prove interattive nel browser direttamente sul sito.</p>
+ <span class="card-link">w3schools.com</span>
+ </a>
+
+ <a class="card" href="https://roadmap.sh" target="_blank" rel="noopener">
+ <div class="card-top"><div class="card-icon"></div><span class="badge free">Gratis</span></div>
+ <h3>Roadmap.sh</h3>
+ <p>Mappe visive dei percorsi di apprendimento per diventare frontend developer, backend developer, DevOps o specialista in sicurezza informatica. Utile per capire cosa studiare e in che ordine.</p>
+ <span class="card-link">roadmap.sh</span>
+ </a>
+
+ <a class="card" href="https://javascript.info" target="_blank" rel="noopener">
+ <div class="card-top"><div class="card-icon"></div><span class="badge free">Gratis</span></div>
+ <h3>JavaScript.info</h3>
+ <p>La guida più completa e moderna a JavaScript. Dai fondamentali agli argomenti avanzati come async/await, Promise e programmazione a oggetti. Molto meglio della documentazione ufficiale per i principianti.</p>
+ <span class="card-link">javascript.info</span>
+ </a>
+
+ </div>
+ </div><!-- /gratuite -->
 
 
-  <!-- ─────────── GRATIS ─────────── -->
-  <div class="sezione">
-    <div class="sezione-head">
-      <h2>Risorse gratuite</h2>
-      <span class="count">7 risorse</span>
-    </div>
-    <p class="sezione-desc">Queste non costano niente. Alcune hanno anche certificazioni gratuite che si possono mettere nel curriculum.</p>
+ <!-- A PAGAMENTO -->
+ <div class="sezione">
+ <div class="sezione-head">
+ <h2>Piattaforme a pagamento</h2>
+ <span class="count">2 risorse</span>
+ </div>
+ <p class="sezione-desc">Costano qualcosa ma offrono corsi universitari, certificazioni riconosciute e spesso sono in offerta.</p>
 
-    <div class="griglia">
+ <div class="griglia">
 
-      <a class="card card-dark" href="https://developer.mozilla.org" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🦊</div><span class="badge free">Gratis</span></div>
-        <h3>MDN Web Docs</h3>
-        <p>La documentazione ufficiale di HTML, CSS e JavaScript. Il riferimento numero uno per ogni sviluppatore web, curato da Mozilla. Se non sai come funziona una proprietà CSS, cerchi qui.</p>
-        <span class="card-link">developer.mozilla.org</span>
-      </a>
+ <a class="card" href="https://www.coursera.org" target="_blank" rel="noopener">
+ <div class="card-top"><div class="card-icon"></div><span class="badge paid">A pagamento</span></div>
+ <h3>Coursera</h3>
+ <p>Corsi universitari online da MIT, Stanford, Google e altre università famose. Le certificazioni sono riconosciute a livello professionale e accademico. Molti corsi si possono seguire gratis in modalità "audit".</p>
+ <span class="card-link">coursera.org</span>
+ </a>
 
-      <a class="card" href="https://www.freecodecamp.org" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🔥</div><span class="badge free">Gratis</span></div>
-        <h3>freeCodeCamp</h3>
-        <p>Corsi completi su sviluppo web, Python, data science e molto altro. Le certificazioni sono gratuite e si ottengono completando progetti pratici reali. È una delle piattaforme più usate al mondo.</p>
-        <span class="card-link">freecodecamp.org</span>
-      </a>
+ <a class="card" href="https://www.udemy.com" target="_blank" rel="noopener">
+ <div class="card-top"><div class="card-icon">‍</div><span class="badge paid">A pagamento</span></div>
+ <h3>Udemy</h3>
+ <p>Migliaia di corsi su sviluppo web, cybersecurity, design e altro ancora. I prezzi sono accessibili e ci sono spesso offerte a 10-15 euro. Si paga una volta sola e si ha accesso per sempre al corso acquistato.</p>
+ <span class="card-link">udemy.com</span>
+ </a>
 
-      <a class="card" href="https://www.theodinproject.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">⚔️</div><span class="badge free">Gratis</span></div>
-        <h3>The Odin Project</h3>
-        <p>Curriculum open source per diventare sviluppatore full-stack. Percorso strutturato con HTML, CSS, JavaScript e poi Ruby o Node.js. Molto pratico, si fanno tanti progetti.</p>
-        <span class="card-link">theodinproject.com</span>
-      </a>
-
-      <a class="card" href="https://cs50.harvard.edu" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🎓</div><span class="badge free">Gratis</span></div>
-        <h3>CS50 – Harvard</h3>
-        <p>Il corso di informatica più famoso al mondo, offerto gratuitamente da Harvard su edX. Copre algoritmi, strutture dati, C, Python, SQL e sviluppo web. Vale veramente tanto come esperienza.</p>
-        <span class="card-link">cs50.harvard.edu</span>
-      </a>
-
-      <a class="card" href="https://www.w3schools.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🌐</div><span class="badge free">Gratis</span></div>
-        <h3>W3Schools</h3>
-        <p>Riferimento rapido per HTML, CSS, JavaScript, SQL, Python e altro ancora. Ideale per controllare la sintassi di un comando e fare prove interattive nel browser direttamente sul sito.</p>
-        <span class="card-link">w3schools.com</span>
-      </a>
-
-      <a class="card" href="https://roadmap.sh" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🗺️</div><span class="badge free">Gratis</span></div>
-        <h3>Roadmap.sh</h3>
-        <p>Mappe visive dei percorsi di apprendimento per diventare frontend developer, backend developer, DevOps o specialista in sicurezza informatica. Utile per capire cosa studiare e in che ordine.</p>
-        <span class="card-link">roadmap.sh</span>
-      </a>
-
-      <a class="card" href="https://javascript.info" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">📖</div><span class="badge free">Gratis</span></div>
-        <h3>JavaScript.info</h3>
-        <p>La guida più completa e moderna a JavaScript. Dai fondamentali agli argomenti avanzati come async/await, Promise e programmazione a oggetti. Molto meglio della documentazione ufficiale per i principianti.</p>
-        <span class="card-link">javascript.info</span>
-      </a>
-
-    </div>
-  </div><!-- /gratuite -->
-
-
-  <!-- ─────────── A PAGAMENTO ─────────── -->
-  <div class="sezione">
-    <div class="sezione-head">
-      <h2>Piattaforme a pagamento</h2>
-      <span class="count">2 risorse</span>
-    </div>
-    <p class="sezione-desc">Costano qualcosa ma offrono corsi universitari, certificazioni riconosciute e spesso sono in offerta.</p>
-
-    <div class="griglia">
-
-      <a class="card" href="https://www.coursera.org" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🎯</div><span class="badge paid">A pagamento</span></div>
-        <h3>Coursera</h3>
-        <p>Corsi universitari online da MIT, Stanford, Google e altre università famose. Le certificazioni sono riconosciute a livello professionale e accademico. Molti corsi si possono seguire gratis in modalità "audit".</p>
-        <span class="card-link">coursera.org</span>
-      </a>
-
-      <a class="card" href="https://www.udemy.com" target="_blank" rel="noopener">
-        <div class="card-top"><div class="card-icon">🧑‍💻</div><span class="badge paid">A pagamento</span></div>
-        <h3>Udemy</h3>
-        <p>Migliaia di corsi su sviluppo web, cybersecurity, design e altro ancora. I prezzi sono accessibili e ci sono spesso offerte a 10-15 euro. Si paga una volta sola e si ha accesso per sempre al corso acquistato.</p>
-        <span class="card-link">udemy.com</span>
-      </a>
-
-    </div>
-  </div><!-- /pagamento -->
+ </div>
+ </div><!-- /pagamento -->
 
 </div><!-- /main -->
 
 
 <footer>
-  <span class="brand-footer">&lt;DevHub /&gt;</span>
-  <span>Progetto scolastico · Matteo R. e Lorenzo B. · 3^B · 2025/2026</span>
-  <span>Tutti i link rimandano a siti esterni.</span>
+ <span class="brand-footer">&lt;DevHub /&gt;</span>
+ <span>Progetto scolastico · Matteo R. e Lorenzo B. · 3^B · 2025/2026</span>
+ <span>Tutti i link rimandano a siti esterni.</span>
 </footer>
 
 <button id="torna-su" title="Torna in cima">↑</button>
