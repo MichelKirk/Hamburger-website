@@ -12,22 +12,34 @@
    si dichiarano nel :root e poi si usano con var(--nome)
    è comoda perché se cambi un colore lo cambi solo qui e si aggiorna dappertutto */
 :root {
-  --bg:     #f5f2eb;   /* sfondo principale (beige chiaro) */
-  --bg2:    #edeae1;   /* sfondo secondario un po' più scuro */
-  --ink:    #1a1814;   /* colore testo principale (quasi nero) */
-  --ink2:   #6b6760;   /* testo secondario (grigio) */
-  --accent: #c84b2f;   /* rosso per gli accenti */
-  --ora:    #e8602a;   /* arancione per highlights */
-  --border: #d6d1c7;   /* colore bordi */
-  --card:   #ffffff;   /* sfondo delle card */
-  --mono:   'DM Mono', monospace;   /* font per codice/label */
-  --sans:   'Cabinet Grotesk', sans-serif;  /* font principale */
+  --bg: #f5f2eb;
+  /* sfondo principale (beige chiaro) */
+  --bg2: #edeae1;
+  /* sfondo secondario un po' più scuro */
+  --ink: #1a1814;
+  /* colore testo principale (quasi nero) */
+  --ink2: #6b6760;
+  /* testo secondario (grigio) */
+  --accent: #c84b2f;
+  /* rosso per gli accenti */
+  --ora: #e8602a;
+  /* arancione per highlights */
+  --border: #d6d1c7;
+  /* colore bordi */
+  --card: #ffffff;
+  /* sfondo delle card */
+  --mono: 'DM Mono', monospace;
+  /* font per codice/label */
+  --sans: 'Cabinet Grotesk', sans-serif;
+  /* font principale */
 }
 
 /* reset base: togliamo margin e padding a tutti gli elementi
    box-sizing: border-box fa sì che il padding non aumenti la larghezza dell'elemento
    questa cosa ci ha fatto impazzire all'inizio perché le div si sovrapponevano */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -38,7 +50,8 @@ body {
   background: var(--bg);
   color: var(--ink);
   font-size: 16px;
-  line-height: 1.6;  /* interlinea, 1.6 è considerata ottimale per la leggibilità */
+  line-height: 1.6;
+  /* interlinea, 1.6 è considerata ottimale per la leggibilità */
 }
 
 /* ============================================
@@ -47,27 +60,40 @@ body {
 
 nav {
   background: var(--ink);
-  padding: 0 5%;        /* 5% ai lati così si adatta a qualsiasi schermo */
+  padding: 0 5%;
+  /* 5% ai lati così si adatta a qualsiasi schermo */
   height: 58px;
-  display: flex;          /* flex è la salvezza per allineare le cose */
-  align-items: center;    /* centra verticalmente */
-  justify-content: space-between;  /* mette logo a sinistra e link a destra */
-  position: sticky;  /* rimane in cima mentre si scrolla, lo ha suggerito Matteo */
+  display: flex;
+  /* flex è la salvezza per allineare le cose */
+  align-items: center;
+  /* centra verticalmente */
+  justify-content: space-between;
+  /* mette logo a sinistra e link a destra */
+  position: sticky;
+  /* rimane in cima mentre si scrolla, lo ha suggerito Matteo */
   top: 0;
-  z-index: 99;  /* z-index alto così sta sopra a tutto il resto della pagina */
+  z-index: 99;
+  /* z-index alto così sta sopra a tutto il resto della pagina */
 }
 
 .brand {
   font-family: var(--mono);
   color: var(--bg);
-  text-decoration: none;  /* toglie la sottolineatura del link */
+  text-decoration: none;
+  /* toglie la sottolineatura del link */
   font-size: .95rem;
 }
-.brand span { color: var(--ora); }  /* la parte arancione del logo */
+
+.brand span {
+  color: var(--ora);
+}
+
+/* la parte arancione del logo */
 
 .nav-links {
   display: flex;
-  gap: 4px;  /* spazio tra i link */
+  gap: 4px;
+  /* spazio tra i link */
 }
 
 .nav-links a {
@@ -80,10 +106,12 @@ nav {
   /* transition: fa l'animazione quando cambia colore, il numero sono i secondi */
   transition: color .15s, background .15s;
 }
+
 .nav-links a:hover {
   color: #fff;
   background: #2a2820;
 }
+
 /* classe per il link della pagina attiva (aggiunta via JavaScript) */
 .nav-links a.attiva {
   color: #fff;
@@ -99,6 +127,7 @@ nav {
   cursor: pointer;
   padding: 4px;
 }
+
 .hamburger span {
   display: block;
   width: 24px;
@@ -124,7 +153,8 @@ nav {
 .eyebrow {
   font-family: var(--mono);
   font-size: .7rem;
-  letter-spacing: .18em;   /* spazio tra le lettere */
+  letter-spacing: .18em;
+  /* spazio tra le lettere */
   text-transform: uppercase;
   color: var(--ora);
   margin-bottom: 18px;
@@ -140,7 +170,12 @@ nav {
   max-width: 680px;
   margin-bottom: 18px;
 }
-.hero h1 em { font-style: normal; color: var(--ora); }
+
+.hero h1 em {
+  font-style: normal;
+  color: var(--ora);
+}
+
 .hero p {
   color: #aaa;
   max-width: 500px;
@@ -149,15 +184,25 @@ nav {
 }
 
 /* le statistiche in basso nell'hero */
-.stats { display: flex; gap: 40px; flex-wrap: wrap; }
+.stats {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
 .stat b {
   font-family: var(--mono);
   font-size: 1.5rem;
   color: #fff;
-  display: block;  /* block per farlo andare a capo rispetto alla small */
+  display: block;
+  /* block per farlo andare a capo rispetto alla small */
   line-height: 1;
 }
-.stat small { font-size: .78rem; color: #666; }
+
+.stat small {
+  font-size: .78rem;
+  color: #666;
+}
 
 
 /* ============================================
@@ -170,14 +215,22 @@ nav {
   padding: 44px 5% 32px;
   border-bottom: 1px solid #2a2820;
 }
-.page-title .eyebrow { margin-bottom: 10px; }
+
+.page-title .eyebrow {
+  margin-bottom: 10px;
+}
+
 .page-title h1 {
   font-size: 1.9rem;
   font-weight: 800;
   letter-spacing: -.02em;
   margin-bottom: 6px;
 }
-.page-title p { color: #888; font-size: .92rem; }
+
+.page-title p {
+  color: #888;
+  font-size: .92rem;
+}
 
 
 /* ============================================
@@ -187,7 +240,8 @@ nav {
 .main {
   padding: 48px 5%;
   max-width: 1280px;
-  margin: 0 auto;  /* auto ai lati centra il blocco orizzontalmente */
+  margin: 0 auto;
+  /* auto ai lati centra il blocco orizzontalmente */
 }
 
 
@@ -195,7 +249,9 @@ nav {
    SEZIONI
    ============================================ */
 
-.sezione { margin-bottom: 56px; }
+.sezione {
+  margin-bottom: 56px;
+}
 
 .sezione-head {
   display: flex;
@@ -205,7 +261,11 @@ nav {
   padding-bottom: 12px;
   margin-bottom: 8px;
 }
-.sezione-head h2 { font-size: 1rem; font-weight: 700; }
+
+.sezione-head h2 {
+  font-size: 1rem;
+  font-weight: 700;
+}
 
 /* il pallino con il numero di risorse */
 .count {
@@ -215,7 +275,8 @@ nav {
   border: 1px solid var(--border);
   color: var(--ink2);
   padding: 2px 8px;
-  border-radius: 20px;  /* border-radius alto lo rende una pillola */
+  border-radius: 20px;
+  /* border-radius alto lo rende una pillola */
 }
 
 .sezione-desc {
@@ -248,15 +309,19 @@ nav {
   border: 1px solid var(--border);
   border-radius: 10px;
   padding: 18px 20px;
-  display: block;       /* display block per occupare tutta la cella della griglia */
+  display: block;
+  /* display block per occupare tutta la cella della griglia */
   text-decoration: none;
   color: var(--ink);
   transition: border-color .18s, box-shadow .18s, transform .15s;
 }
+
 .card:hover {
   border-color: var(--accent);
-  box-shadow: 0 4px 18px rgba(200,75,47,.12);  /* ombra con un po' di trasparenza */
-  transform: translateY(-2px);  /* si solleva di 2px al passaggio del mouse */
+  box-shadow: 0 4px 18px rgba(200, 75, 47, .12);
+  /* ombra con un po' di trasparenza */
+  transform: translateY(-2px);
+  /* si solleva di 2px al passaggio del mouse */
   text-decoration: none;
   color: var(--ink);
 }
@@ -268,7 +333,9 @@ nav {
   margin-bottom: 10px;
 }
 
-.card-icon { font-size: 1.4rem; }
+.card-icon {
+  font-size: 1.4rem;
+}
 
 /* badge = l'etichetta tipo "Gratis", "A pagamento" ecc. */
 .badge {
@@ -282,13 +349,42 @@ nav {
   background: var(--bg2);
   color: var(--ink2);
 }
-/* varianti colore del badge a seconda del tipo */
-.badge.free  { background: #edf7ef; color: #2a6e3f; border-color: #b6e2c2; }  /* verde */
-.badge.paid  { background: #fff4ec; color: #b04a00; border-color: #f5c4a0; }  /* arancione */
-.badge.open  { background: #eef3ff; color: #2a4ea8; border-color: #bccbf5; }  /* blu */
 
-.card h3 { font-size: .97rem; font-weight: 700; margin-bottom: 5px; }
-.card p  { font-size: .82rem; color: var(--ink2); margin-bottom: 14px; line-height: 1.5; }
+/* varianti colore del badge a seconda del tipo */
+.badge.free {
+  background: #edf7ef;
+  color: #2a6e3f;
+  border-color: #b6e2c2;
+}
+
+/* verde */
+.badge.paid {
+  background: #fff4ec;
+  color: #b04a00;
+  border-color: #f5c4a0;
+}
+
+/* arancione */
+.badge.open {
+  background: #eef3ff;
+  color: #2a4ea8;
+  border-color: #bccbf5;
+}
+
+/* blu */
+
+.card h3 {
+  font-size: .97rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.card p {
+  font-size: .82rem;
+  color: var(--ink2);
+  margin-bottom: 14px;
+  line-height: 1.5;
+}
 
 .card-link {
   font-family: var(--mono);
@@ -298,7 +394,12 @@ nav {
   align-items: center;
   gap: 4px;
 }
-.card-link::after { content: '→'; }  /* la freccia dopo il link, aggiunta con CSS puro */
+
+.card-link::after {
+  content: '→';
+}
+
+/* la freccia dopo il link, aggiunta con CSS puro */
 
 /* versione scura della card (per le risorse in evidenza) */
 .card-dark {
@@ -306,10 +407,25 @@ nav {
   border-color: #2a2820;
   color: var(--bg);
 }
-.card-dark:hover { border-color: var(--ora); color: var(--bg); }
-.card-dark p { color: #888; }
-.card-dark .card-link { color: var(--ora); }
-.card-dark .badge { background: #2a2820; color: #888; border-color: #383530; }
+
+.card-dark:hover {
+  border-color: var(--ora);
+  color: var(--bg);
+}
+
+.card-dark p {
+  color: #888;
+}
+
+.card-dark .card-link {
+  color: var(--ora);
+}
+
+.card-dark .badge {
+  background: #2a2820;
+  color: #888;
+  border-color: #383530;
+}
 
 
 /* ============================================
@@ -319,6 +435,7 @@ nav {
 .search-box {
   margin-bottom: 28px;
 }
+
 .search-box input {
   width: 100%;
   max-width: 440px;
@@ -332,14 +449,20 @@ nav {
   outline: none;
   transition: border-color .2s;
 }
+
 .search-box input:focus {
-  border-color: var(--accent);  /* bordo rosso quando si clicca sull'input */
+  border-color: var(--accent);
+  /* bordo rosso quando si clicca sull'input */
 }
-.search-box input::placeholder { color: #aaa; }
+
+.search-box input::placeholder {
+  color: #aaa;
+}
 
 /* messaggio che appare se la ricerca non trova nulla */
 .nessun-risultato {
-  display: none;  /* nascosto di default, JS lo mostra se serve */
+  display: none;
+  /* nascosto di default, JS lo mostra se serve */
   color: var(--ink2);
   font-size: .9rem;
   padding: 20px 0;
@@ -352,7 +475,8 @@ nav {
    ============================================ */
 
 #torna-su {
-  display: none;   /* nascosto, JS lo fa apparire dopo un po' di scroll */
+  display: none;
+  /* nascosto, JS lo fa apparire dopo un po' di scroll */
   position: fixed;
   bottom: 28px;
   right: 28px;
@@ -361,13 +485,15 @@ nav {
   border: none;
   width: 42px;
   height: 42px;
-  border-radius: 50%;   /* cerchio perfetto */
+  border-radius: 50%;
+  /* cerchio perfetto */
   font-size: 1.1rem;
   cursor: pointer;
   z-index: 100;
-  box-shadow: 0 4px 14px rgba(0,0,0,.2);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, .2);
   transition: background .2s, transform .2s;
 }
+
 #torna-su:hover {
   background: var(--ora);
   transform: translateY(-3px);
@@ -444,14 +570,17 @@ nav {
    DOMANDE FREQUENTI (FAQ) - pagina contatti
    ============================================ */
 
-.faq-lista { margin-top: 20px; }
+.faq-lista {
+  margin-top: 20px;
+}
 
 .faq-item {
   border: 1px solid var(--border);
   border-radius: 8px;
   margin-bottom: 10px;
   background: var(--card);
-  overflow: hidden;  /* nasconde il contenuto che sporge fuori */
+  overflow: hidden;
+  /* nasconde il contenuto che sporge fuori */
 }
 
 /* questa parte è quella su cui si clicca */
@@ -463,7 +592,8 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  user-select: none;  /* non permette di selezionare il testo per sbaglio */
+  user-select: none;
+  /* non permette di selezionare il testo per sbaglio */
 }
 
 .faq-domanda::after {
@@ -479,14 +609,17 @@ nav {
 }
 
 .faq-risposta {
-  display: none;   /* nascosta di default, JS la mostra */
+  display: none;
+  /* nascosta di default, JS la mostra */
   padding: 0 20px 16px;
   font-size: .85rem;
   color: var(--ink2);
   line-height: 1.6;
 }
 
-.faq-item.aperta .faq-risposta { display: block; }
+.faq-item.aperta .faq-risposta {
+  display: block;
+}
 
 
 /* ============================================
@@ -516,9 +649,19 @@ footer {
   flex-wrap: wrap;
   gap: 10px;
 }
-footer .brand-footer { color: var(--ora); }
-footer a { color: #555; text-decoration: none; }
-footer a:hover { color: #888; }
+
+footer .brand-footer {
+  color: var(--ora);
+}
+
+footer a {
+  color: #555;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #888;
+}
 
 
 /* ============================================
@@ -527,6 +670,7 @@ footer a:hover { color: #888; }
    ============================================ */
 
 @media (max-width: 640px) {
+
   /* navbar: nasconde i link e mostra l'hamburger */
   .nav-links {
     display: none;
@@ -540,12 +684,31 @@ footer a:hover { color: #888; }
     gap: 2px;
     border-top: 1px solid #2a2820;
   }
-  .nav-links.aperta { display: flex; }  /* JS aggiunge questa classe */
-  .hamburger { display: flex; }
 
-  .stats { gap: 24px; }
-  .griglia { grid-template-columns: 1fr; }  /* una colonna sola su mobile */
-  .chi-siamo-grid { grid-template-columns: 1fr; }
+  .nav-links.aperta {
+    display: flex;
+  }
 
-  footer { flex-direction: column; text-align: center; }
+  /* JS aggiunge questa classe */
+  .hamburger {
+    display: flex;
+  }
+
+  .stats {
+    gap: 24px;
+  }
+
+  .griglia {
+    grid-template-columns: 1fr;
+  }
+
+  /* una colonna sola su mobile */
+  .chi-siamo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    flex-direction: column;
+    text-align: center;
+  }
 }

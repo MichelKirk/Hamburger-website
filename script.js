@@ -11,7 +11,7 @@
 /* aspettiamo che la pagina sia completamente caricata
    prima di eseguire qualsiasi cosa (ce lo ha detto l'IA,
    senza questo il codice non trovava gli elementi HTML) */
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
 
 
   /* =============================================
@@ -33,11 +33,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
   if (elementiStat.length > 0) {
 
-    var observer = new IntersectionObserver(function(voci) {
-      voci.forEach(function(voce) {
+    var observer = new IntersectionObserver(function (voci) {
+      voci.forEach(function (voce) {
         if (voce.isIntersecting) {
 
-          elementiStat.forEach(function(el) {
+          elementiStat.forEach(function (el) {
             var testoOriginale = el.textContent;
             var numero = parseInt(testoOriginale);
             var simbolo = testoOriginale.replace(numero, '');
@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
             var passi = 40;
             var incremento = numero / passi;
 
-            var timer = setInterval(function() {
+            var timer = setInterval(function () {
               corrente += incremento;
               if (corrente >= numero) {
                 corrente = numero;
@@ -58,7 +58,9 @@ document.addEventListener('DOMContentLoaded', function() {
           observer.unobserve(voce.target);
         }
       });
-    }, { threshold: 0.5 });
+    }, {
+      threshold: 0.5
+    });
 
     var stats = document.querySelector('.stats');
     if (stats) observer.observe(stats);
@@ -83,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function() {
   var btnTornaSu = document.getElementById('torna-su');
 
   if (btnTornaSu) {
-    window.addEventListener('scroll', function() {
+    window.addEventListener('scroll', function () {
       if (window.scrollY > 300) {
         btnTornaSu.style.display = 'block';
       } else {
@@ -91,8 +93,11 @@ document.addEventListener('DOMContentLoaded', function() {
       }
     });
 
-    btnTornaSu.addEventListener('click', function() {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
+    btnTornaSu.addEventListener('click', function () {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
     });
   }
 
@@ -112,11 +117,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
   var domandeFaq = document.querySelectorAll('.faq-domanda');
 
-  domandeFaq.forEach(function(domanda) {
-    domanda.addEventListener('click', function() {
+  domandeFaq.forEach(function (domanda) {
+    domanda.addEventListener('click', function () {
       var item = domanda.parentElement;
 
-      document.querySelectorAll('.faq-item').forEach(function(altra) {
+      document.querySelectorAll('.faq-item').forEach(function (altra) {
         if (altra !== item) altra.classList.remove('aperta');
       });
 

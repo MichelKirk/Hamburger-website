@@ -1,149 +1,186 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Sviluppo – DevHub</title>
- <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sviluppo – DevHub</title>
+    <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<nav>
- <a href="index.html" class="brand">&lt;<span>Dev</span>Hub /&gt;</a>
- <div class="nav-links">
- <a href="index.html">Home</a>
- <a href="imparare.html">Imparare</a>
- <a href="design.html">Design</a>
- <a href="sviluppo.html">Sviluppo</a>
- <a href="programmi.html">Programmi</a>
- <a href="contatti.html">Chi siamo</a>
- </div>
-</nav>
+    <nav>
+        <a href="index.html" class="brand">&lt;<span>Dev</span>Hub /&gt;</a>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="imparare.html">Imparare</a>
+            <a href="design.html">Design</a>
+            <a href="sviluppo.html">Sviluppo</a>
+            <a href="programmi.html">Programmi</a>
+            <a href="contatti.html">Chi siamo</a>
+        </div>
+    </nav>
 
 
-<div class="page-title">
- <div class="eyebrow">Categoria · Strumenti tecnici</div>
- <h1> Sviluppo</h1>
- <p>Risorse tecniche per chi già programma. Hosting, versionamento del codice, strumenti CSS e testing.</p>
-</div>
+    <div class="page-title">
+        <div class="eyebrow">Categoria · Strumenti tecnici</div>
+        <h1> Sviluppo</h1>
+        <p>Risorse tecniche per chi già programma. Hosting, versionamento del codice, strumenti CSS e testing.</p>
+    </div>
 
 
-<div class="main">
+    <div class="main">
 
- <!-- VERSIONING E COLLABORAZIONE -->
- <div class="sezione">
- <div class="sezione-head">
- <h2>Versionamento e collaborazione</h2>
- <span class="count">2 risorse</span>
- </div>
- <p class="sezione-desc">
- Il versionamento del codice permette di tenere traccia di tutte le modifiche e lavorare in gruppo senza sovrascrivere
- il lavoro degli altri. È una cosa fondamentale nel mondo del lavoro reale.
- </p>
+        <!-- VERSIONING E COLLABORAZIONE -->
+        <div class="sezione">
+            <div class="sezione-head">
+                <h2>Versionamento e collaborazione</h2>
+                <span class="count">2 risorse</span>
+            </div>
+            <p class="sezione-desc">
+                Il versionamento del codice permette di tenere traccia di tutte le modifiche e lavorare in gruppo senza
+                sovrascrivere
+                il lavoro degli altri. È una cosa fondamentale nel mondo del lavoro reale.
+            </p>
 
- <div class="griglia">
+            <div class="griglia">
 
- <a class="card card-dark" href="https://github.com" target="_blank" rel="noopener">
- <div class="card-top"><div class="card-icon"></div><span class="badge free">Freemium</span></div>
- <h3>GitHub</h3>
- <p>La piattaforma più usata per salvare e condividere codice online. Si basa su Git (il sistema di versionamento). Quasi tutti i progetti open source del mondo sono su GitHub. Noi abbiamo caricato questo progetto qui.</p>
- <span class="card-link">github.com</span>
- </a>
+                <a class="card card-dark" href="https://github.com" target="_blank" rel="noopener">
+                    <div class="card-top">
+                        <div class="card-icon"></div><span class="badge free">Freemium</span>
+                    </div>
+                    <h3>GitHub</h3>
+                    <p>La piattaforma più usata per salvare e condividere codice online. Si basa su Git (il sistema di
+                        versionamento). Quasi tutti i progetti open source del mondo sono su GitHub. Noi abbiamo
+                        caricato questo progetto qui.</p>
+                    <span class="card-link">github.com</span>
+                </a>
 
- <a class="card" href="https://gitlab.com" target="_blank" rel="noopener">
- <div class="card-top"><div class="card-icon"></div><span class="badge open">Open Source</span></div>
- <h3>GitLab</h3>
- <p>Alternativa a GitHub, open source e con funzionalità di CI/CD integrate gratuitamente. Molto usato nelle aziende che preferiscono tenere il codice su server propri (self-hosted). Ottimo per i progetti scolastici.</p>
- <span class="card-link">gitlab.com</span>
- </a>
+                <a class="card" href="https://gitlab.com" target="_blank" rel="noopener">
+                    <div class="card-top">
+                        <div class="card-icon"></div><span class="badge open">Open Source</span>
+                    </div>
+                    <h3>GitLab</h3>
+                    <p>Alternativa a GitHub, open source e con funzionalità di CI/CD integrate gratuitamente. Molto
+                        usato nelle aziende che preferiscono tenere il codice su server propri (self-hosted). Ottimo per
+                        i progetti scolastici.</p>
+                    <span class="card-link">gitlab.com</span>
+                </a>
 
- </div>
- </div>
-
-
- <!-- HOSTING -->
- <div class="sezione">
- <div class="sezione-head">
- <h2>Hosting e deploy</h2>
- <span class="count">3 risorse</span>
- </div>
- <p class="sezione-desc">
- Per pubblicare un sito online bisogna caricarlo su un server. Questi servizi permettono di farlo
- in modo semplice, spesso gratuitamente per progetti piccoli come i progetti scolastici.
- </p>
-
- <div class="griglia">
-
- <a class="card" href="https://pages.github.com" target="_blank" rel="noopener">
- <div class="card-top"><div class="card-icon"></div><span class="badge free">Gratis</span></div>
- <h3>GitHub Pages</h3>
- <p>Permette di pubblicare siti web statici (HTML/CSS/JS) direttamente da un repository GitHub, gratis. Perfetto per i progetti scolastici. Questo sito potrebbe essere pubblicato così senza spendere niente.</p>
- <span class="card-link">pages.github.com</span>
- </a>
-
- <a class="card" href="https://vercel.com" target="_blank" rel="noopener">
- <div class="card-top"><div class="card-icon"></div><span class="badge free">Freemium</span></div>
- <h3>Vercel</h3>
- <p>Piattaforma per il deploy di siti web e applicazioni. Si collega a GitHub e pubblica automaticamente ogni volta che si fa un push. La versione gratuita è più che sufficiente per la maggior parte dei progetti.</p>
- <span class="card-link">vercel.com</span>
- </a>
-
- <a class="card" href="https://www.netlify.com" target="_blank" rel="noopener">
- <div class="card-top"><div class="card-icon"></div><span class="badge free">Freemium</span></div>
- <h3>Netlify</h3>
- <p>Alternativa a Vercel, molto usata per i siti statici. Permette anche di gestire form di contatto e funzioni serverless senza configurare un backend. Deploy automatico da GitHub o drag and drop dei file.</p>
- <span class="card-link">netlify.com</span>
- </a>
-
- </div>
- </div>
+            </div>
+        </div>
 
 
- <!-- STRUMENTI CSS E TESTING -->
- <div class="sezione">
- <div class="sezione-head">
- <h2>Strumenti CSS e testing</h2>
- <span class="count">3 risorse</span>
- </div>
- <p class="sezione-desc">Utilità online per scrivere CSS migliore, verificare la compatibilità con i browser e testare il codice al volo.</p>
+        <!-- HOSTING -->
+        <div class="sezione">
+            <div class="sezione-head">
+                <h2>Hosting e deploy</h2>
+                <span class="count">3 risorse</span>
+            </div>
+            <p class="sezione-desc">
+                Per pubblicare un sito online bisogna caricarlo su un server. Questi servizi permettono di farlo
+                in modo semplice, spesso gratuitamente per progetti piccoli come i progetti scolastici.
+            </p>
 
- <div class="griglia">
+            <div class="griglia">
 
- <a class="card" href="https://codepen.io" target="_blank" rel="noopener">
- <div class="card-top"><div class="card-icon"></div><span class="badge free">Freemium</span></div>
- <h3>CodePen</h3>
- <p>Editor online dove si scrivono HTML, CSS e JavaScript e si vede il risultato in tempo reale. Perfetto per fare prove rapide senza aprire VS Code. C'è anche una community enorme con migliaia di esempi interattivi da cui imparare.</p>
- <span class="card-link">codepen.io</span>
- </a>
+                <a class="card" href="https://pages.github.com" target="_blank" rel="noopener">
+                    <div class="card-top">
+                        <div class="card-icon"></div><span class="badge free">Gratis</span>
+                    </div>
+                    <h3>GitHub Pages</h3>
+                    <p>Permette di pubblicare siti web statici (HTML/CSS/JS) direttamente da un repository GitHub,
+                        gratis. Perfetto per i progetti scolastici. Questo sito potrebbe essere pubblicato così senza
+                        spendere niente.</p>
+                    <span class="card-link">pages.github.com</span>
+                </a>
 
- <a class="card" href="https://caniuse.com" target="_blank" rel="noopener">
- <div class="card-top"><div class="card-icon"></div><span class="badge free">Gratis</span></div>
- <h3>Can I Use</h3>
- <p>Controlla se una proprietà CSS o una funzionalità JavaScript è supportata da tutti i browser (Chrome, Firefox, Safari, Edge...). Indispensabile per non fare errori di compatibilità. Ci vuole un attimo a controllare.</p>
- <span class="card-link">caniuse.com</span>
- </a>
+                <a class="card" href="https://vercel.com" target="_blank" rel="noopener">
+                    <div class="card-top">
+                        <div class="card-icon"></div><span class="badge free">Freemium</span>
+                    </div>
+                    <h3>Vercel</h3>
+                    <p>Piattaforma per il deploy di siti web e applicazioni. Si collega a GitHub e pubblica
+                        automaticamente ogni volta che si fa un push. La versione gratuita è più che sufficiente per la
+                        maggior parte dei progetti.</p>
+                    <span class="card-link">vercel.com</span>
+                </a>
 
- <a class="card" href="https://css-tricks.com" target="_blank" rel="noopener">
- <div class="card-top"><div class="card-icon"></div><span class="badge free">Gratis</span></div>
- <h3>CSS-Tricks</h3>
- <p>Il sito di riferimento per tutto quello che riguarda il CSS. Articoli tecnici approfonditi, guide su Flexbox e CSS Grid, almanacco completo delle proprietà. Abbiamo trovato qui la spiegazione di auto-fill con minmax che usiamo nella griglia del sito.</p>
- <span class="card-link">css-tricks.com</span>
- </a>
+                <a class="card" href="https://www.netlify.com" target="_blank" rel="noopener">
+                    <div class="card-top">
+                        <div class="card-icon"></div><span class="badge free">Freemium</span>
+                    </div>
+                    <h3>Netlify</h3>
+                    <p>Alternativa a Vercel, molto usata per i siti statici. Permette anche di gestire form di contatto
+                        e funzioni serverless senza configurare un backend. Deploy automatico da GitHub o drag and drop
+                        dei file.</p>
+                    <span class="card-link">netlify.com</span>
+                </a>
 
- </div>
- </div>
-
-</div><!-- /main -->
+            </div>
+        </div>
 
 
-<footer>
- <span class="brand-footer">&lt;DevHub /&gt;</span>
- <span>Progetto scolastico · Matteo R. e Lorenzo B. · 3^B · 2025/2026</span>
- <span>Tutti i link rimandano a siti esterni.</span>
-</footer>
+        <!-- STRUMENTI CSS E TESTING -->
+        <div class="sezione">
+            <div class="sezione-head">
+                <h2>Strumenti CSS e testing</h2>
+                <span class="count">3 risorse</span>
+            </div>
+            <p class="sezione-desc">Utilità online per scrivere CSS migliore, verificare la compatibilità con i browser
+                e testare il codice al volo.</p>
 
-<button id="torna-su" title="Torna in cima">↑</button>
+            <div class="griglia">
 
-<script src="script.js"></script>
+                <a class="card" href="https://codepen.io" target="_blank" rel="noopener">
+                    <div class="card-top">
+                        <div class="card-icon"></div><span class="badge free">Freemium</span>
+                    </div>
+                    <h3>CodePen</h3>
+                    <p>Editor online dove si scrivono HTML, CSS e JavaScript e si vede il risultato in tempo reale.
+                        Perfetto per fare prove rapide senza aprire VS Code. C'è anche una community enorme con migliaia
+                        di esempi interattivi da cui imparare.</p>
+                    <span class="card-link">codepen.io</span>
+                </a>
+
+                <a class="card" href="https://caniuse.com" target="_blank" rel="noopener">
+                    <div class="card-top">
+                        <div class="card-icon"></div><span class="badge free">Gratis</span>
+                    </div>
+                    <h3>Can I Use</h3>
+                    <p>Controlla se una proprietà CSS o una funzionalità JavaScript è supportata da tutti i browser
+                        (Chrome, Firefox, Safari, Edge...). Indispensabile per non fare errori di compatibilità. Ci
+                        vuole un attimo a controllare.</p>
+                    <span class="card-link">caniuse.com</span>
+                </a>
+
+                <a class="card" href="https://css-tricks.com" target="_blank" rel="noopener">
+                    <div class="card-top">
+                        <div class="card-icon"></div><span class="badge free">Gratis</span>
+                    </div>
+                    <h3>CSS-Tricks</h3>
+                    <p>Il sito di riferimento per tutto quello che riguarda il CSS. Articoli tecnici approfonditi, guide
+                        su Flexbox e CSS Grid, almanacco completo delle proprietà. Abbiamo trovato qui la spiegazione di
+                        auto-fill con minmax che usiamo nella griglia del sito.</p>
+                    <span class="card-link">css-tricks.com</span>
+                </a>
+
+            </div>
+        </div>
+
+    </div><!-- /main -->
+
+
+    <footer>
+        <span class="brand-footer">&lt;DevHub /&gt;</span>
+        <span>Progetto scolastico · Matteo R. e Lorenzo B. · 3^B · 2025/2026</span>
+        <span>Tutti i link rimandano a siti esterni.</span>
+    </footer>
+
+    <button id="torna-su" title="Torna in cima">↑</button>
+
+    <script src="script.js"></script>
 </body>
+
 </html>
