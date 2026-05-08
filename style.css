@@ -1,6 +1,6 @@
 /* =============================================
    DevHub - Progetto Scolastico
-   Autori: Matteo R. e Lorenzo B.
+   Autori: Michel Vitali e Maxim Solonaru
    Classe: 3^B Informatica
    Anno: 2025/2026
    ============================================= */
@@ -70,7 +70,7 @@ nav {
   justify-content: space-between;
   /* mette logo a sinistra e link a destra */
   position: sticky;
-  /* rimane in cima mentre si scrolla, lo ha suggerito Matteo */
+  /* rimane in cima mentre si scrolla, lo ha suggerito Maxim */
   top: 0;
   z-index: 99;
   /* z-index alto così sta sopra a tutto il resto della pagina */
@@ -429,7 +429,7 @@ nav {
 
 
 /* ============================================
-   BARRA DI RICERCA (aggiunta da Lorenzo con aiuto IA)
+   BARRA DI RICERCA (aggiunta da Maxim con aiuto IA)
    ============================================ */
 
 .search-box {
