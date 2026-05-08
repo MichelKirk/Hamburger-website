@@ -1,16 +1,8 @@
-/* =============================================
-   DevHub - Progetto Scolastico
-   Autori: Michel Vitali e Maxim Solonaru
-   Classe: 3^B Informatica
-   Anno: 2025/2026
-   ============================================= */
-
-/* importiamo i font da google fonts, sono gratis e si mettono prima di tutto */
+/* importiamo i font da google fonts, sono gratis, specifico gratis, a chi NON PIACE GRATIS? */
 @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Cabinet+Grotesk:wght@300;400;500;700;800&display=swap');
 
 /* le variabili CSS -- questa cosa delle variabili l'abbiamo imparata di recente
-   si dichiarano nel :root e poi si usano con var(--nome)
-   è comoda perché se cambi un colore lo cambi solo qui e si aggiorna dappertutto */
+   si dichiarano nel :root e poi si usano con var(--nome) poi vbb dai ci sta */
 :root {
   --bg: #f5f2eb;
   /* sfondo principale (beige chiaro) */
@@ -37,74 +29,63 @@
 /* reset base: togliamo margin e padding a tutti gli elementi
    box-sizing: border-box fa sì che il padding non aumenti la larghezza dell'elemento
    questa cosa ci ha fatto impazzire all'inizio perché le div si sovrapponevano */
-*,
-*::before,
-*::after {
+*{
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
 body {
-  font-family: var(--sans);
-  background: var(--bg);
+  font-family: var(--sans); 
+  background: var(--bg); 
   color: var(--ink);
   font-size: 16px;
-  line-height: 1.6;
-  /* interlinea, 1.6 è considerata ottimale per la leggibilità */
+  line-height: 1.6; /* spazio quello verticale, non so come si chiama dai avra capito */
 }
 
-/* ============================================
-   NAVBAR
-   ============================================ */
+
+
+
+/* === NAVBAR === */
 
 nav {
   background: var(--ink);
-  padding: 0 5%;
-  /* 5% ai lati così si adatta a qualsiasi schermo */
+  padding: 0 5%; /* padding orizzontale del 5% per il meme */
   height: 58px;
-  display: flex;
-  /* flex è la salvezza per allineare le cose */
-  align-items: center;
-  /* centra verticalmente */
-  justify-content: space-between;
-  /* mette logo a sinistra e link a destra */
-  position: sticky;
-  /* rimane in cima mentre si scrolla, lo ha suggerito Maxim */
+  display: flex; /* flex per mettere logo e link sulla stessa riga */
+  align-items: center; 
+  justify-content: space-between; /* mette logo a sinistra e link a destra */
+  position: sticky; /* rimane in cima mentre si scrolla, lo ha suggerito Maxim,a cui a sua volta ha suggerito l'Arci */
   top: 0;
-  z-index: 99;
-  /* z-index alto così sta sopra a tutto il resto della pagina */
+  z-index: 99; /* z-index alto così sta sopra a tutto il resto della pagina */
 }
 
 .brand {
   font-family: var(--mono);
   color: var(--bg);
-  text-decoration: none;
-  /* toglie la sottolineatura del link */
-  font-size: .95rem;
+  text-decoration: none; 
+  font-size: .95rem; /*Consigliata dall'IA */
 }
 
 .brand span {
-  color: var(--ora);
+  color: var(--ora); /* la parte arancione del logo */
 }
 
-/* la parte arancione del logo */
+
 
 .nav-links {
   display: flex;
   gap: 4px;
-  /* spazio tra i link */
 }
 
 .nav-links a {
   color: #999;
   text-decoration: none;
-  font-size: .82rem;
+  font-size: .82rem; /*IA*/
   font-weight: 600;
   padding: 6px 12px;
   border-radius: 5px;
-  /* transition: fa l'animazione quando cambia colore, il numero sono i secondi */
-  transition: color .15s, background .15s;
+  transition: color .15s, background .15s; /* IA : transition: fa l'animazione quando cambia colore, il numero sono i secondi */
 }
 
 .nav-links a:hover {
@@ -112,40 +93,13 @@ nav {
   background: #2a2820;
 }
 
-/* classe per il link della pagina attiva (aggiunta via JavaScript) */
-.nav-links a.attiva {
-  color: #fff;
-  background: var(--accent);
-}
 
-/* hamburger menu per mobile - aggiunto dopo, ci ha aiutato l'IA perché
-   non sapevamo come farlo sparire/comparire con solo CSS */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
-  padding: 4px;
-}
-
-.hamburger span {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: #fff;
-  border-radius: 2px;
-  transition: all .3s;
-}
-
-
-/* ============================================
-   HERO (sezione grande in cima alla homepage)
-   ============================================ */
+/* HERO (sezione grande in cima alla homepage) */
 
 .hero {
-  background: var(--ink);
+  background: var(--ink); /* sfondo scuro per far risaltare il testo chiaro */
   color: var(--bg);
-  padding: 72px 5% 56px;
+  padding: 67px 5% 56px; /* padding verticale più grande per dare spazio, 5% orizzontale per il meme */
   border-bottom: 1px solid #2a2820;
 }
 
@@ -154,8 +108,9 @@ nav {
   font-family: var(--mono);
   font-size: .7rem;
   letter-spacing: .18em;
-  /* spazio tra le lettere */
-  text-transform: uppercase;
+
+
+  text-transform: uppercase; /* tutto maiuscolo */
   color: var(--ora);
   margin-bottom: 18px;
 }
@@ -205,9 +160,7 @@ nav {
 }
 
 
-/* ============================================
-   TITOLO PAGINA (usato nelle pagine interne)
-   ============================================ */
+/* TITOLO PAGINA (usato nelle pagine interne) */
 
 .page-title {
   background: var(--ink);
@@ -233,9 +186,7 @@ nav {
 }
 
 
-/* ============================================
-   CONTENUTO PRINCIPALE
-   ============================================ */
+/* CONTENUTO PRINCIPALE */
 
 .main {
   padding: 48px 5%;
@@ -245,9 +196,7 @@ nav {
 }
 
 
-/* ============================================
-   SEZIONI
-   ============================================ */
+/* SEZIONI */
 
 .sezione {
   margin-bottom: 56px;
@@ -286,12 +235,7 @@ nav {
 }
 
 
-/* ============================================
-   GRIGLIA CARD
-   auto-fill con minmax è una cosa pazzesca: crea automaticamente le colonne
-   in base alla larghezza disponibile, senza bisogno di media query!
-   L'abbiamo trovata su CSS-Tricks, non l'abbiamo capita al 100% ma funziona
-   ============================================ */
+/* GRIGLIA trovata su CSS-Tricks, non l'abbiamo capita ma funziona */
 
 .griglia {
   display: grid;
@@ -300,9 +244,7 @@ nav {
 }
 
 
-/* ============================================
-   CARD
-   ============================================ */
+/* CARD */
 
 .card {
   background: var(--card);
@@ -319,17 +261,17 @@ nav {
 .card:hover {
   border-color: var(--accent);
   box-shadow: 0 4px 18px rgba(200, 75, 47, .12);
-  /* ombra con un po' di trasparenza */
+  /* ombra con un po' di trasparenza, proprio quella che non spaevo fare nella verifica*/
   transform: translateY(-2px);
-  /* si solleva di 2px al passaggio del mouse */
+  /* si solleva di 2px al passaggio del mouse, no dai sherzo la traduce in Ynglese*/
   text-decoration: none;
   color: var(--ink);
 }
 
 .card-top {
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  justify-content: space-between; /* mette icona a sinistra e badge a destra */
+  align-items: flex-start; /* allinea in alto l'icona e il badge */
   margin-bottom: 10px;
 }
 
@@ -337,7 +279,7 @@ nav {
   font-size: 1.4rem;
 }
 
-/* badge = l'etichetta tipo "Gratis", "A pagamento" ecc. */
+/* badge = l'etichetta */
 .badge {
   font-family: var(--mono);
   font-size: .62rem;
@@ -357,21 +299,18 @@ nav {
   border-color: #b6e2c2;
 }
 
-/* verde */
 .badge.paid {
   background: #fff4ec;
   color: #b04a00;
   border-color: #f5c4a0;
 }
 
-/* arancione */
 .badge.open {
   background: #eef3ff;
   color: #2a4ea8;
   border-color: #bccbf5;
 }
 
-/* blu */
 
 .card h3 {
   font-size: .97rem;
@@ -395,13 +334,11 @@ nav {
   gap: 4px;
 }
 
-.card-link::after {
-  content: '→';
+.card-link::after { /* ::after -> pseudo-elemento che viene dopo il testo del link */
+  content: '→'; /* freccia dopo il link, aggiunta con CSS puro */
 }
 
-/* la freccia dopo il link, aggiunta con CSS puro */
-
-/* versione scura della card (per le risorse in evidenza) */
+/* Top Card */
 .card-dark {
   background: var(--ink);
   border-color: #2a2820;
@@ -428,57 +365,16 @@ nav {
 }
 
 
-/* ============================================
-   BARRA DI RICERCA (aggiunta da Maxim con aiuto IA)
-   ============================================ */
 
-.search-box {
-  margin-bottom: 28px;
-}
-
-.search-box input {
-  width: 100%;
-  max-width: 440px;
-  padding: 10px 16px;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  font-family: var(--sans);
-  font-size: .9rem;
-  background: var(--card);
-  color: var(--ink);
-  outline: none;
-  transition: border-color .2s;
-}
-
-.search-box input:focus {
-  border-color: var(--accent);
-  /* bordo rosso quando si clicca sull'input */
-}
-
-.search-box input::placeholder {
-  color: #aaa;
-}
-
-/* messaggio che appare se la ricerca non trova nulla */
-.nessun-risultato {
-  display: none;
-  /* nascosto di default, JS lo mostra se serve */
-  color: var(--ink2);
-  font-size: .9rem;
-  padding: 20px 0;
-}
-
-
-/* ============================================
-   BOTTONE TORNA SU
+/* BOTTONE TORNA SU
    position fixed lo mette fisso in basso a destra anche scrollando
-   ============================================ */
+    */
 
 #torna-su {
   display: none;
   /* nascosto, JS lo fa apparire dopo un po' di scroll */
   position: fixed;
-  bottom: 28px;
+  bottom: 28px; 
   right: 28px;
   background: var(--accent);
   color: #fff;
@@ -486,37 +382,41 @@ nav {
   width: 42px;
   height: 42px;
   border-radius: 50%;
-  /* cerchio perfetto */
   font-size: 1.1rem;
-  cursor: pointer;
+  cursor: pointer; /* fa diventare il cursore una mano quando si passa sopra */
   z-index: 100;
   box-shadow: 0 4px 14px rgba(0, 0, 0, .2);
-  transition: background .2s, transform .2s;
+  transition: background .2s, transform .2s; /*IA : aggiunge un'animazione quando cambia il colore o la posizione */
 }
 
-#torna-su:hover {
+#torna-su:hover { /* quando si passa sopra al bottone */
   background: var(--ora);
   transform: translateY(-3px);
 }
 
 
-/* ============================================
-   SEZIONE "CHI SIAMO" (pagina contatti)
-   ============================================ */
+/* SEZIONE "CHI SIAMO" (pagina contatti) */
 
 .chi-siamo-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: repeat(2, 1fr);
+  place-items: center;
+  max-width: 700px;
+  margin: 0 auto 40px;
   gap: 20px;
-  margin-bottom: 40px;
 }
 
 .profilo-card {
   background: var(--card);
   border: 1px solid var(--border);
   border-radius: 12px;
-  padding: 28px 24px;
+  padding: 12px 24px;
   text-align: center;
+}
+
+.profilo-card img{
+  margin-top: 0;
+  max-width: 300px;
 }
 
 .profilo-avatar {
@@ -566,9 +466,9 @@ nav {
 }
 
 
-/* ============================================
+/*
    DOMANDE FREQUENTI (FAQ) - pagina contatti
-   ============================================ */
+   */
 
 .faq-lista {
   margin-top: 20px;
@@ -622,19 +522,19 @@ nav {
 }
 
 
-/* ============================================
+/*
    CONTATORE ANIMATO (nella homepage)
    -- questa parte l'ha fatta l'IA, vedi script.js per la spiegazione
-   ============================================ */
+   */
 
 .stat b.animato {
   display: inline-block;
 }
 
 
-/* ============================================
+/*
    FOOTER
-   ============================================ */
+   */
 
 footer {
   background: var(--ink);
@@ -663,52 +563,3 @@ footer a:hover {
   color: #888;
 }
 
-
-/* ============================================
-   RESPONSIVE / MOBILE
-   sotto 640px cambia il layout
-   ============================================ */
-
-@media (max-width: 640px) {
-
-  /* navbar: nasconde i link e mostra l'hamburger */
-  .nav-links {
-    display: none;
-    position: absolute;
-    top: 58px;
-    left: 0;
-    right: 0;
-    background: var(--ink);
-    flex-direction: column;
-    padding: 12px 5%;
-    gap: 2px;
-    border-top: 1px solid #2a2820;
-  }
-
-  .nav-links.aperta {
-    display: flex;
-  }
-
-  /* JS aggiunge questa classe */
-  .hamburger {
-    display: flex;
-  }
-
-  .stats {
-    gap: 24px;
-  }
-
-  .griglia {
-    grid-template-columns: 1fr;
-  }
-
-  /* una colonna sola su mobile */
-  .chi-siamo-grid {
-    grid-template-columns: 1fr;
-  }
-
-  footer {
-    flex-direction: column;
-    text-align: center;
-  }
-}
