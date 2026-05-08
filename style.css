@@ -417,12 +417,14 @@ nav {
 .profilo-card img{
   margin-top: 0;
   max-width: 300px;
+  max-height: 300px;
 }
 
 .profilo-avatar {
   font-size: 3rem;
-  margin-bottom: 14px;
+  margin-bottom: 20px;
   display: block;
+  
 }
 
 .profilo-card h3 {
@@ -466,9 +468,7 @@ nav {
 }
 
 
-/*
-   DOMANDE FREQUENTI (FAQ) - pagina contatti
-   */
+/*   DOMANDE FREQUENTI (FAQ) - pagina contatti  */
 
 .faq-lista {
   margin-top: 20px;
@@ -479,8 +479,7 @@ nav {
   border-radius: 8px;
   margin-bottom: 10px;
   background: var(--card);
-  overflow: hidden;
-  /* nasconde il contenuto che sporge fuori */
+  overflow: hidden; /* nasconde il contenuto che sporge fuori */
 }
 
 /* questa parte è quella su cui si clicca */
@@ -532,9 +531,7 @@ nav {
 }
 
 
-/*
-   FOOTER
-   */
+/* FOOTER */
 
 footer {
   background: var(--ink);
